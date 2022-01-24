@@ -1,7 +1,7 @@
 <h1>Tarot Deck</h1>
 <div class="scroller"
   <% if @cards.any? %>
-    <ul>
+    <ul class="tarot-list">
       <% @cards.each do |card| %>
         <li><%= link_to card.name, card_path(card) %></li>
       <% end %>
