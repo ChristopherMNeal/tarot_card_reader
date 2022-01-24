@@ -5,6 +5,7 @@
       <div class="card">
         <h2 class="card-title"><%= @reading_array[0].name %></h2>
         <div id="back-card-1">
+          <%= image_tag ("card_back.jpg"), :class => "card-back" %>
         </div>
         <div id="card-image-1">
           <%= image_tag @reading_array[0].attached_image, :class => "card-image" %>
@@ -17,20 +18,22 @@
     <div class="col-sm-4">
       <div class="card">
         <h2 class="card-title"><%= @reading_array[1].name %></h2>
-        <div id="back-card-2">
+        <div class="card-back" id="back-card-2">
+          <%= image_tag ("card_back.jpg"), :class => "card-back" %>
         </div>
         <div id="card-image-2">
           <%= image_tag @reading_array[1].attached_image, :class => "card-image" %>
         </div>
       </div>
       <div class="description">
-        <p><%= @reading_array[1].description %></p>
+        <div class="inside-description"><p><%= @reading_array[1].description %></p></div>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="card">
         <h2 class="card-title"><%= @reading_array[2].name %></h2>
-        <div id="back-card-3">
+        <div class="card-back" id="back-card-3">
+          <%= image_tag ("card_back.jpg"), :class => "card-back" %>
         </div>
         <div id="card-image-3">
           <%= image_tag @reading_array[2].attached_image, :class => "card-image" %>

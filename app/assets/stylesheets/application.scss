@@ -24,6 +24,12 @@ body {
   font-size: 1.2em;
 }
 
+.card-back {
+  // display: none;
+  width: 100%;
+  border-radius: 15px;
+}
+
 .description {
   width: 100%;
   text-align: justify;
@@ -38,6 +44,7 @@ body {
 
 .card-image {
   width: 100%;
+  border-radius: 15px;
 }
 
 .card-holder {
@@ -57,4 +64,14 @@ body {
     .card-holder {
     width: 300px;
   }
+}
+
+.description{
+  padding: 2rem;
+  background-image: linear-gradient(to bottom right, #00466e, #70a9ca);
+  height:300px;
+  overflow: hidden;
+}
+.inside-description{
+  overflow: scroll;
 }
