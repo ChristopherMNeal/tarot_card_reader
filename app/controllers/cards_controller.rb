@@ -25,7 +25,7 @@ class CardsController < ApplicationController
   end
 
   def show
-    @cared = Card.find(params[:id])
+    @card = Card.find(params[:id])
     render :show
   end
 
@@ -42,6 +42,17 @@ class CardsController < ApplicationController
     @card = Card.find(params[:id])
     @card.destroy
     redirect_to cards_path
+  end
+
+  def reading
+    @cards = Card.all.shuffle
+    @reading_array = @cards.slice(0,3)
+    render :reading
+  end
+
+  def random
+    @card = Card.all.sample
+    render :random
   end
 
   private
