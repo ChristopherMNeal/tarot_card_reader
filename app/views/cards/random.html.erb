@@ -3,6 +3,5 @@
 <h3>Reverse Description: <%= @card.reverse_description %></h3>
 <hr>
 <%= image_tag(@card.attached_image) %>
-
-
-<p><%= link_to "Back to home", root_path %></p>
+<br>
+<%= link_to "Back to home", root_path, :class => "nav btn btn-primary" %>

@@ -19,5 +19,19 @@ $(document).on 'turbolinks:load', ->
   $(".flip-card-1").click ->
     $(this).toggleClass('flipped')
 
+
   $(".flip-card-2").click ->
     $(this).toggleClass('flipped')
+    
+  $("#ten-back-card-1").click ->
+    $("#ten-back-card-1").hide();
+    $("#ten-card-image-1").show();
+
+  $("#ten-back-card-2").click ->
+    $("#ten-back-card-2").hide();
+    $("#ten-card-image-2").show();
+
+  $("#ten-back-card-3").click ->
+    $("#ten-back-card-3").hide();
+    $("#ten-card-image-3").show();
+
