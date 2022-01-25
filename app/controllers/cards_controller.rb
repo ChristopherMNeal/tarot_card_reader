@@ -44,10 +44,16 @@ class CardsController < ApplicationController
     redirect_to cards_path
   end
 
-  def reading
+  def three
     @cards = Card.all.shuffle
-    @reading_array = @cards.slice(0,3)
-    render :reading
+    @three = @cards.slice(0,3)
+    render :three
+  end
+
+  def ten
+    @cards = Card.all.shuffle
+    @ten = @cards.slice(0,10)
+    render :ten
   end
 
   def random

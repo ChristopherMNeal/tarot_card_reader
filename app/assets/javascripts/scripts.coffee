@@ -11,5 +11,3 @@ $(document).on 'turbolinks:load', ->
     $("#back-card-3").hide();
     $("#card-image-3").show();
 
-
-  

@@ -1,0 +1,57 @@
+<div class="card-holder">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <h2 class="card-title">Past</h2>
+        <div id="back-card-1">
+          <%= image_tag ("card_back.jpg"), :class => "card-back" %>
+        </div>
+        <div id="card-image-1">
+          <%= image_tag @ten[0].attached_image, :class => "card-image" %>
+        </div>
+      </div>
+      <div class="description">
+      <h4 class="description-title"><%= @ten[0].name %></h4>
+      <div class="inside-description">
+        <p><%= @ten[0].description %></p>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <h2 class="card-title">Present</h2>
+        <div class="card-back" id="back-card-2">
+          <%= image_tag ("card_back.jpg"), :class => "card-back" %>
+        </div>
+        <div id="card-image-2">
+          <%= image_tag @ten[1].attached_image, :class => "card-image" %>
+        </div>
+      </div>
+      <div class="description">
+      <h4 class="description-title"><%= @ten[1].name %></h4>
+        <div class="inside-description">
+          <p><%= @ten[1].description %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <h2 class="card-title">Future</h2>
+        <div class="card-back" id="back-card-3">
+          <%= image_tag ("card_back.jpg"), :class => "card-back" %>
+        </div>
+        <div id="card-image-3">
+          <%= image_tag @ten[2].attached_image, :class => "card-image" %>
+        </div>
+      </div>
+      <div class="description">
+      <h4 class="description-title"><%= @ten[2].name %></h4>
+        <div class="inside-description"> 
+          <p><%= @ten[2].description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="nav"><%= link_to "Back to home", root_path %></p>
