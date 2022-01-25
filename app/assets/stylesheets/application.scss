@@ -25,26 +25,43 @@ body {
 }
 
 .card-back {
-  // display: none;
   width: 100%;
-  border-radius: 15px;
+  border-radius: 20px;
+}
+
+#card-image-1, #card-image-2, #card-image-3 {
+  display: none;
 }
 
 .description {
   width: 100%;
   text-align: justify;
-  text-indent: 10%;
   margin-top: 15px;
 }
 
 .card-title {
   font-family: cursive;
   text-align: center;
+  background-image: linear-gradient(to bottom right, #00466e, #70a9ca);
+  width: fit-content;
+  padding: 7px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 5px;
 }
 
 .card-image {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 20px;
+}
+
+.show-image {
+  width: 50%;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .card-holder {
@@ -54,10 +71,28 @@ body {
 
 .tarot-list {
   list-style-type: none;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.tarot-ul {
+  background-image: linear-gradient(to bottom right, #00466e, #70a9ca);
+  width: fit-content;
+  padding: 7px 15px;
+  border-radius: 5px;
+}
+
+a, a:hover, a:visited, a:active {
+  color: white;
 }
 
 .container {
-  margin-bottom:5vh;
+  margin-bottom: 5vh;
+}
+
+.nav {
+  font-size: 1.5em;
+  font-style: italic;
 }
 
 @media only screen and (max-width: 770px) {
@@ -66,12 +101,28 @@ body {
   }
 }
 
-.description{
-  padding: 2rem;
+.show-description {
   background-image: linear-gradient(to bottom right, #00466e, #70a9ca);
-  height:300px;
-  overflow: hidden;
+  padding:2rem;
 }
+
+.description-title {
+  font-family: cursive;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: -5px;
+  border-radius: 5px;
+}
+
+.description{
+  background-image: linear-gradient(to bottom right, #00466e, #70a9ca);
+  height: 300px;
+  padding:20px;
+  border-radius: 5px;
+}
+
 .inside-description{
   overflow: scroll;
+  height:240px;
+  text-indent: 10%;
 }
