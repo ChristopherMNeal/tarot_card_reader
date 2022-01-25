@@ -330,34 +330,52 @@ a, a:hover, a:visited, a:active {
 
 .center-2 {
   position: relative;
-  top: 11vh;
+  top: 29vh;
   left: 2vw;
 }
 
 .center-1 {
   position: relative;
-  bottom: 11vh;
+  top: 40vh;
   right: 2vw;
 }
 
 .right-10 {
   position: relative;
-  bottom: 11vh;
 }
 
 .right-9 {
   position: relative;
-  bottom: 11vh;
+  top: 23vh;
 }
 
 .right-8 {
   position: relative;
-  bottom: 11vh;
+  top: 46vh;
 }
 
 .right-7 {
   position: relative;
-  bottom: 11vh;
+  top: 69vh;
+}
+
+.right-6 {
+  position: relative;
+  top: 33vh;
+}
+
+.left-5 {
+  position: relative;
+  top: 33vh;
+}
+
+.top-3 {
+  position: relative;
+}
+
+.bottom-4 {
+  position: relative;
+  top: 69vh;
 }
 
 // home page 
@@ -749,3 +767,18 @@ button:focus {
   transform: rotateY(180deg);
 }
 
+.tooltip-wrap {
+  position: relative;
+}
+.tooltip-wrap .tooltip-content {
+  display: none;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+  background-color: #fff;
+  padding: .5em;
+}
+.tooltip-wrap:hover .tooltip-content {
+  display: block;
+}
