@@ -28,7 +28,20 @@ body {
   border-radius: 20px;
 }
 
+.ten-card-back {
+  width: auto;
+  height: 22vh;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 #card-image-1, #card-image-2, #card-image-3 {
+  display: none;
+}
+
+#ten-card-image-1, #ten-card-image-2, #ten-card-image-3 {
   display: none;
 }
 
@@ -55,6 +68,15 @@ body {
   border-radius: 20px;
 }
 
+.ten-card-image {
+  width: auto;
+  height: 22vh;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 .show-image {
   width: 50%;
   border-radius: 20px;
@@ -64,6 +86,10 @@ body {
 }
 
 .card-holder {
+  width: 90%;
+  margin: 2vh auto;
+}
+.ten-card-holder {
   width: 90%;
   margin: 2vh auto;
 }
@@ -126,4 +152,4 @@ a, a:hover, a:visited, a:active {
   text-indent: 10%;
 }
 
-# card flipping
+// card flipping
