@@ -1,51 +1,62 @@
 <div class="card-holder">
   <div class="row">
     <div class="col-sm-4">
+      <h2 class="card-title">Past</h2>
       <div class="card">
-        <h2 class="card-title">Past</h2>
-        <div id="back-card-1">
-          <%= image_tag ("card_back.jpg"), :class => "card-back" %>
-        </div>
-        <div id="card-image-1">
-          <%= image_tag @three[0].attached_image, :class => "card-image" %>
-        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div id="back-card-1" class="flip-card-front">
+              <%= image_tag ("card_back.jpg"), :class => "card-back" %>
+            </div> 
+            <div id="card-image-1" class="flip-card-back">
+              <%= image_tag @three[0].attached_image, :class => "card-image" %>
+            </div>
+          </div>
+        </div>  
       </div>
       <div class="description">
-      <h4 class="description-title"><%= @three[0].name %></h4>
-      <div class="inside-description">
-        <p><%= @three[0].description %></p>
-      </div>
-      </div>
+        <h4 class="description-title"><%= @three[0].name %></h4>
+        <div class="inside-description">
+          <p><%= @three[0].description %></p>
+        </div>
+      </div> 
     </div>
     <div class="col-sm-4">
+      <h2 class="card-title">Present</h2>
       <div class="card">
-        <h2 class="card-title">Present</h2>
-        <div class="card-back" id="back-card-2">
-          <%= image_tag ("card_back.jpg"), :class => "card-back" %>
-        </div>
-        <div id="card-image-2">
-          <%= image_tag @three[1].attached_image, :class => "card-image" %>
+        <div class="flip-card-1">
+          <div class="flip-card-inner-1">
+            <div class="flip-card-front-1" id="back-card-2">
+              <%= image_tag ("card_back.jpg"), :class => "card-back" %>
+            </div>
+            <div id="card-image-2" class="flip-card-back-1">
+              <%= image_tag @three[1].attached_image, :class => "card-image" %>
+            </div>
+          </div>
         </div>
       </div>
       <div class="description">
-      <h4 class="description-title"><%= @three[1].name %></h4>
+        <h4 class="description-title"><%= @three[1].name %></h4>
         <div class="inside-description">
           <p><%= @three[1].description %></p>
         </div>
       </div>
     </div>
     <div class="col-sm-4">
+      <h2 class="card-title">Future</h2>
       <div class="card">
-        <h2 class="card-title">Future</h2>
-        <div class="card-back" id="back-card-3">
-          <%= image_tag ("card_back.jpg"), :class => "card-back" %>
-        </div>
-        <div id="card-image-3">
-          <%= image_tag @three[2].attached_image, :class => "card-image" %>
+        <div class="flip-card-2">
+          <div class="flip-card-inner-2">
+            <div class="flip-card-front-2" id="back-card-3">                    <%= image_tag ("card_back.jpg"), :class => "card-back" %>
+            </div>
+            <div id="card-image-3" class="flip-card-back-2">
+              <%= image_tag @three[2].attached_image, :class => "card-image" %>
+            </div>
+          </div>
         </div>
       </div>
       <div class="description">
-      <h4 class="description-title"><%= @three[2].name %></h4>
+        <h4 class="description-title"><%= @three[2].name %></h4>
         <div class="inside-description"> 
           <p><%= @three[2].description %></p>
         </div>
