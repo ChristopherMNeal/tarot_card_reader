@@ -13,6 +13,12 @@
  *= require_self
  */
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+
+@font-face {
+  font-family: fancifulScript;
+  src: url("/assets/GreatVibes-Regular.otf") format("opentype");
+}
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -40,8 +46,14 @@ body {
   display: block;
 }
 
-#ten-card-image-1, #ten-card-image-2, #ten-card-image-3 {
-  display: none;
+
+.ten-card-image {
+  width: auto;
+  height: 22vh;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .description {
@@ -50,15 +62,14 @@ body {
   text-align: justify;
   margin-left: auto;
   margin-right: auto;
-  
 }
 
 .card-title {
-  font-family: cursive, sans-serif;
+  font-family: fancifulScript;
   text-shadow: #fff 0 0 10px;
+  font-weight:bold;
   text-align: center;
   // background-image: linear-gradient(to bottom right, #00466e, #70a9ca);
-
   width: fit-content;
   padding: 7px 15px;
   margin-left: auto;
@@ -75,17 +86,10 @@ body {
   display: block;
 }
 
-.ten-card-image {
-  width: auto;
-  height: 22vh;
-  border-radius: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
 
 .show-image {
-  width: 20vw;
+  width: 15vw;
+  height: auto;
   border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -95,10 +99,32 @@ body {
 .card-holder {
   width: 90%;
   margin: 2vh auto;
+  height: 110vh;
 }
+
 .ten-card-holder {
   width: 90%;
   margin: 2vh auto;
+}
+.tarot-origins{
+  background: #e9e3e5;
+  padding:5rem;
+  margin:10vh;
+  color:black;
+  font-family:serif;
+  
+}
+
+.tarot-history {
+  background: #e9e3e5;
+  padding: 5rem;
+  margin: 10vh;
+  color: black;
+  font-family: serif;
+}
+
+.history {
+  font-size:1.75rem;
 }
 
 .tarot-list {
@@ -108,17 +134,34 @@ body {
 }
 
 .tarot-ul {
-  background-image: linear-gradient(to bottom right, #00466e, #70a9ca);
+  background: #70a9ca;
   width: fit-content;
   padding: 7px 15px;
   border-radius: 5px;
+}
+
+ol.q {
+  list-style-type: upper-roman;
+}
+
+.key-ten {
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: #e9e3e5;
+  color: black;
+  padding: 1rem;
+}
+
+.key-ten li {
+  padding-left: 1rem;
 }
 
 a, a:hover, a:visited, a:active {
   color: white;
 }
 
-.container {
+.container-fluid {
   margin-bottom: 5vh;
 }
 
@@ -134,12 +177,17 @@ a, a:hover, a:visited, a:active {
 }
 
 .show-description {
-  background-image: linear-gradient(to bottom right, #00466e, #70a9ca);
-  padding:2rem;
+  font-size: 20px;
+  background: #70a9ca;
+  padding: 2rem;
+  font-family: serif;
+  border-radius: 5px;
+  width: 40%;
+  margin: 0 auto;
 }
 
 .description-title {
-  font-family: cursive;
+  font-family: fancifulScript;
   text-align: center;
   font-size: 1.5em;
   margin-top: -5px;
@@ -147,13 +195,13 @@ a, a:hover, a:visited, a:active {
   box-shadow: 0px 0px 5px #fff;
 }
 
-.description{
+.description {
   background: #70a9ca;
   height: 250px;
   padding:20px;
 }
 
-.inside-description{
+.inside-description {
   overflow: scroll;
   overflow-x: hidden;
   height:185px;
@@ -231,7 +279,6 @@ a, a:hover, a:visited, a:active {
 }
 
 .flip-card-back-1 {
-
   transform: rotateY(180deg);
 }
 //card-3 future
@@ -248,7 +295,6 @@ a, a:hover, a:visited, a:active {
   transform-style: preserve-3d;
   box-shadow: 0 8px 10px 0 rgba(90,90,90,0.2)
 }
-
 
 .flip-card-2.flipped .flip-card-inner-2 {   
   transform: rotateY(180deg);
@@ -279,5 +325,427 @@ a, a:hover, a:visited, a:active {
 }
 
 .desc-push {
-  margin: 62vh auto 0 auto;
+  margin: 63vh auto 0 auto;
 }
+
+.center-2 {
+  position: relative;
+  top: 11vh;
+  left: 2vw;
+}
+
+.center-1 {
+  position: relative;
+  bottom: 11vh;
+  right: 2vw;
+}
+
+.right-10 {
+  position: relative;
+  bottom: 11vh;
+}
+
+.right-9 {
+  position: relative;
+  bottom: 11vh;
+}
+
+.right-8 {
+  position: relative;
+  bottom: 11vh;
+}
+
+.right-7 {
+  position: relative;
+  bottom: 11vh;
+}
+
+// home page 
+
+#home-row {
+  margin-left: 10%;
+  font-size: 10px;
+}
+
+.origins {
+  font-size: 1.75rem;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+		-webkit-tap-highlight-color: transparent;
+}
+
+button {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	border: 0px solid #70a9ca;
+	background: #3c84ad;
+	transition: 200ms;
+}
+
+button span {
+	position: absolute;
+	transform: translateX(-50%) translateY(-50%);
+	font-family: 'Berkshire Swash', cursive;
+	font-size: 15px;
+	color: #70a9ca;
+	transition: 500ms;
+}
+
+button::before, button::after {
+	content: '';
+	position: absolute;
+	margin-left: -75px;
+	margin-top: -25px;
+	width: 140px;
+	height: 40px;
+	z-index: -1;
+}
+
+button::before {
+	border: 5px solid #70a9ca;
+	transition: 200ms;
+}
+
+button::after {
+	border: 5px solid #59a0c9;
+	transition: 500ms;
+}
+
+button:hover {
+	border: 5px solid #8bc5e7;
+}
+
+button:hover span {
+	letter-spacing: 4px;
+	font-size: 15px;
+}
+
+button:hover::before {
+	width: 150px;
+	height: 50px;
+	margin-left: -80px;
+	margin-top: -30px;
+}
+
+button:hover::after {
+	width: 160px;
+	height: 60px;
+	margin-left: -85px;
+	margin-top: -35px;
+}
+
+button:focus {
+	outline: none;
+}
+
+
+
+
+//card-1 ten spread
+.card-1 {
+  background-color: transparent; 
+  perspective: 1000px;  
+}
+
+.card-1-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+
+.card-1.flipped .card-1-inner {   
+  transform: rotateY(180deg);
+}
+
+.ten-card-image-1, .ten-back-card-1 {
+  position: absolute;
+  width: 100%;
+  height: 22vh;
+  backface-visibility: hidden;
+}
+
+.ten-back-card-1 {
+  transform: rotateY(180deg);
+}
+
+//card-2 ten spread
+.card-2 {
+  background-color: transparent; 
+  perspective: 1000px;  
+}
+
+.card-2-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+
+.card-2.flipped .card-2-inner {   
+  transform: rotateY(180deg);
+}
+
+.ten-card-image-2, .ten-back-card-2 {
+  position: absolute;
+  width: 100%;
+  height: 22vh;
+  backface-visibility: hidden;
+}
+
+.ten-back-card-2 {
+  transform: rotateY(180deg);
+}
+
+//card-3 ten spread
+.card-3 {
+  background-color: transparent; 
+  perspective: 1000px;  
+}
+
+.card-3-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+
+.card-3.flipped .card-3-inner {   
+  transform: rotateY(180deg);
+}
+
+.ten-card-image-3, .ten-back-card-3 {
+  position: absolute;
+  width: 100%;
+  height: 22vh;
+  backface-visibility: hidden;
+}
+
+.ten-back-card-3 {
+  transform: rotateY(180deg);
+}
+
+//card-4 ten spread
+.card-4 {
+  background-color: transparent; 
+  perspective: 1000px;  
+}
+
+.card-4-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+
+.card-4.flipped .card-4-inner {   
+  transform: rotateY(180deg);
+}
+
+.ten-card-image-4, .ten-back-card-4 {
+  position: absolute;
+  width: 100%;
+  height: 22vh;
+  backface-visibility: hidden;
+}
+
+.ten-back-card-4 {
+  transform: rotateY(180deg);
+}
+
+//card-5 ten spread
+.card-5 {
+  background-color: transparent; 
+  perspective: 1000px;  
+}
+
+.card-5-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+
+.card-5.flipped .card-5-inner {   
+  transform: rotateY(180deg);
+}
+
+.ten-card-image-5, .ten-back-card-5 {
+  position: absolute;
+  width: 100%;
+  height: 22vh;
+  backface-visibility: hidden;
+}
+
+.ten-back-card-5 {
+  transform: rotateY(180deg);
+}
+
+//card-6 ten spread
+.card-6 {
+  background-color: transparent; 
+  perspective: 1000px;  
+}
+
+.card-6-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+
+.card-6.flipped .card-6-inner {   
+  transform: rotateY(180deg);
+}
+
+.ten-card-image-6, .ten-back-card-6 {
+  position: absolute;
+  width: 100%;
+  height: 22vh;
+  backface-visibility: hidden;
+}
+
+.ten-back-card-6 {
+  transform: rotateY(180deg);
+}
+
+//card-7 ten spread
+.card-7 {
+  background-color: transparent; 
+  perspective: 1000px;  
+}
+
+.card-7-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+
+.card-7.flipped .card-7-inner {   
+  transform: rotateY(180deg);
+}
+
+.ten-card-image-7, .ten-back-card-7 {
+  position: absolute;
+  width: 100%;
+  height: 22vh;
+  backface-visibility: hidden;
+}
+
+.ten-back-card-7 {
+  transform: rotateY(180deg);
+}
+
+//card-8 ten spread
+.card-8 {
+  background-color: transparent; 
+  perspective: 1000px;  
+}
+
+.card-8-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+
+.card-8.flipped .card-8-inner {   
+  transform: rotateY(180deg);
+}
+
+.ten-card-image-8, .ten-back-card-8 {
+  position: absolute;
+  width: 100%;
+  height: 22vh;
+  backface-visibility: hidden;
+}
+
+.ten-back-card-8 {
+  transform: rotateY(180deg);
+}
+
+//card-9 ten spread
+.card-9 {
+  background-color: transparent; 
+  perspective: 1000px;  
+}
+
+.card-9-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+
+.card-9.flipped .card-9-inner {   
+  transform: rotateY(180deg);
+}
+
+.ten-card-image-9, .ten-back-card-9 {
+  position: absolute;
+  width: 100%;
+  height: 22vh;
+  backface-visibility: hidden;
+}
+
+.ten-back-card-9 {
+  transform: rotateY(180deg);
+}
+
+//card-10 ten spread
+.card-10 {
+  background-color: transparent; 
+  perspective: 1000px;  
+}
+
+.card-10-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+
+.card-10.flipped .card-10-inner {   
+  transform: rotateY(180deg);
+}
+
+.ten-card-image-10, .ten-back-card-10 {
+  position: absolute;
+  width: 100%;
+  height: 22vh;
+  backface-visibility: hidden;
+}
+
+.ten-back-card-10 {
+  transform: rotateY(180deg);
+}
+

@@ -2,92 +2,136 @@
   <div class="row">
     <div class="col-sm-3">
       <h2 class="card-title">Descriptions of Cards</h2>
+      <div class="key-ten">
+        <ol class="q">
+          <li> Querent / Significator</li>
+          <li> Obstacle / Challenge</li>
+          <li> Influences / Conscious</li>
+          <li> Root / Subconscious</li>
+          <li> Past</li>
+          <li> Future</li>
+          <li> Attitude</li>
+          <li> Environment</li>
+          <li> Hopes & Fears</li>
+          <li> Outcome</li>
+        </ol>
+      </div>
+      <div class="position-description">
+        <h3>Description of the position</h3>
+        <p>Stuff goes here</p>
+      </div>
+      <div class="selected-description">
+        <h3>Description of the selected card</h3>
+        <p>More stuff goes here</p>
+      </div>
     </div>
     <div class="col-sm-2 side-card">
       <div class="card push-down">
-        <div id="ten-back-card-3">
-          <%= image_tag ("card_back.jpg"), :class => "ten-card-back" %>
-        </div>
-        <div id="ten-card-image-3">
-          <%= image_tag @ten[2].attached_image, :class => "ten-card-image" %>
+        <div class="card-5">
+          <div class="card-5-inner">
+            <div class="ten-back-card-5">
+              <%= image_tag @ten[4].attached_image, :id => "card-5-back", :class => "ten-card-back" %>
+            </div>
+            <div class="ten-card-image-5">
+              <%= image_tag ("card5.jpg"), :id => "card-5", :class => "ten-card-image" %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-sm-3">
-      <div class="card">
-        <div class="ten-card-back" id="ten-back-card-2">
-          <%= image_tag ("card_back.jpg"), :class => "ten-card-back" %>
-        </div>
-        <div id="ten-card-image-2">
-          <%= image_tag @ten[1].attached_image, :class => "ten-card-image" %>
-        </div>
-      </div>
-      <div class="card">
-        <div class="ten-card-back" id="ten-back-card-3">
-          <%= image_tag ("card_back.jpg"), :class => "ten-card-back" %>
-        </div>
-        <div id="ten-card-image-3">
-          <%= image_tag @ten[2].attached_image, :class => "ten-card-image" %>
+      <div class="card-3">
+        <div class="card-3-inner">
+          <div class="ten-back-card-3">
+            <%= image_tag @ten[2].attached_image, :id => "card-3-back", :class => "ten-card-back" %>
+          </div>
+          <div class="ten-card-image-3">
+            <%= image_tag ("card3.jpg"), :id => "card-3", :class => "ten-card-image" %>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="ten-card-back" id="ten-back-card-3">
-          <%= image_tag ("card_back.jpg"), :class => "ten-card-back" %>
-        </div>
-        <div id="ten-card-image-3">
-          <%= image_tag @ten[2].attached_image, :class => "ten-card-image" %>
+      <div class="card-2 center-2">
+        <div class="card-2-inner">
+          <div class="ten-back-card-2">
+            <%= image_tag @ten[1].attached_image, :id => "card-2-back", :class => "ten-card-back" %>
+          </div>
+          <div class="ten-card-image-2">
+            <%= image_tag ("card1.jpg"), :id => "card-2", :class => "ten-card-image" %>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="ten-card-back" id="ten-back-card-3">
-          <%= image_tag ("card_back.jpg"), :class => "ten-card-back" %>
+      <div class="card-1 center-1">
+        <div class="card-1-inner">
+          <div class="ten-back-card-1">
+            <%= image_tag @ten[0].attached_image, :id => "card-1-back", :class => "ten-card-back" %>
+          </div>
+          <div class="ten-card-image-1">
+            <%= image_tag ("card1.jpg"), :id => "card-1", :class => "ten-card-image" %>
+          </div>
         </div>
-        <div id="ten-card-image-3">
-          <%= image_tag @ten[2].attached_image, :class => "ten-card-image" %>
+      </div>
+      <div class="card-4">
+        <div class="card-4-inner">
+          <div class="ten-back-card-4">
+            <%= image_tag @ten[3].attached_image, :id => "card-4-back", :class => "ten-card-back" %>
+          </div>
+          <div class="ten-card-image-4">
+            <%= image_tag ("card4.jpg"), :id => "card-4", :class => "ten-card-image" %>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-sm-2 side-card">
-      <div class="card push-down">
-        <div class="ten-card-back" id="ten-back-card-3">
-          <%= image_tag ("card_back.jpg"), :class => "ten-card-back" %>
-        </div>
-        <div id="ten-card-image-3">
-          <%= image_tag @ten[2].attached_image, :class => "ten-card-image" %>
+      <div class="card-6">
+        <div class="card-6-inner">
+          <div class="ten-back-card-6">
+            <%= image_tag @ten[5].attached_image, :id => "card-6-back", :class => "ten-card-back" %>
+          </div>
+          <div class="ten-card-image-6">
+            <%= image_tag ("card6.jpg"), :id => "card-6", :class => "ten-card-image" %>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-sm-2">
-      <div class="card">
-        <div class="ten-card-back" id="ten-back-card-3">
-          <%= image_tag ("card_back.jpg"), :class => "ten-card-back" %>
+    <div class="card-10 right-10">
+      <div class="card-10-inner">
+        <div class="ten-back-card-10">
+          <%= image_tag @ten[9].attached_image, :id => "card-10-back", :class => "ten-card-back" %>
         </div>
-        <div id="ten-card-image-3">
-          <%= image_tag @ten[2].attached_image, :class => "ten-card-image" %>
-        </div>
-      </div>
-      <div class="card">
-        <div class="ten-card-back" id="ten-back-card-3">
-          <%= image_tag ("card_back.jpg"), :class => "ten-card-back" %>
-        </div>
-        <div id="ten-card-image-3">
-          <%= image_tag @ten[2].attached_image, :class => "ten-card-image" %>
+        <div class="ten-card-image-10">
+          <%= image_tag ("card10.jpg"), :id => "card-10", :class => "ten-card-image" %>
         </div>
       </div>
-      <div class="card">
-        <div class="ten-card-back" id="ten-back-card-3">
-          <%= image_tag ("card_back.jpg"), :class => "ten-card-back" %>
-        </div>
-        <div id="ten-card-image-3">
-          <%= image_tag @ten[2].attached_image, :class => "ten-card-image" %>
+    </div>
+      <div class="card-9 right-9">
+        <div class="card-9-inner">
+          <div class="ten-back-card-9">
+            <%= image_tag @ten[8].attached_image, :id => "card-9-back", :class => "ten-card-back" %>
+          </div>
+          <div class="ten-card-image-9">
+            <%= image_tag ("card9.jpg"), :id => "card-9", :class => "ten-card-image" %>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="ten-card-back" id="ten-back-card-3">
-          <%= image_tag ("card_back.jpg"), :class => "ten-card-back" %>
+      <div class="card-8 right-8">
+        <div class="card-8-inner">
+          <div class="ten-back-card-8">
+            <%= image_tag @ten[7].attached_image, :id => "card-8-back", :class => "ten-card-back" %>
+          </div>
+          <div class="ten-card-image-8">
+            <%= image_tag ("card8.jpg"), :id => "card-8", :class => "ten-card-image" %>
+          </div>
         </div>
-        <div id="ten-card-image-3">
-          <%= image_tag @ten[2].attached_image, :class => "ten-card-image" %>
+      </div>
+      <div class="card-7 right-7">
+        <div class="card-7-inner">
+          <div class="ten-back-card-7">
+            <%= image_tag @ten[6].attached_image, :id => "card-7-back", :class => "ten-card-back" %>
+          </div>
+          <div class="ten-card-image-7">
+            <%= image_tag ("card7.jpg"), :id => "card-7", :class => "ten-card-image" %>
+          </div>
         </div>
       </div>
     </div>

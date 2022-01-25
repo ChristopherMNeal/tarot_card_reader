@@ -1,9 +1,44 @@
-<h1 class="card-title">Welcome!</h1>
+<h1 class="card-title" id="welcome-welcome">Welcome!</h1>
+<div class="row" id="home-row">
+  <div class="col-md-3">
+  <button class="noselect"><span><%= link_to "Three card reading", cards_three_path %></span></button>
+  
+  </div>
+  <div class="col-md-3">
+    <button class="noselect"><span><%= link_to "Ten card reading", cards_ten_path %></span></button>
+  </div>
+  <div class="col-md-3">
+    <button class="noselect"><span><%= link_to "View all tarot cards", cards_path %></span></button>
+  </div>
+  <div class="col-md-3">
+    <button class="noselect"><span><%= link_to "Your card of the day.", cards_random_path%></span></button>
+  </div>
+</div>
 
-<p class="nav"><%= link_to "Get a three card tarot reading", cards_three_path %></p>
+<div class="tarot-origins">
+<h2>Origins of <em>Tarot</em></h2>
+  <p class="origins">Like many forms of divination, Tarot cards are a tool to help you tap into your own intuition and the wisdom of the universal energy that guides your life. Tarot, which has origins in 14th century Europe, is not a form of fortune telling. It's more like a mirror that reflects what is happening in your life at the moment. Tarot is able to tap into hidden thoughts, feelings and truths and bring them to the surface so you can use that information to make decisions about life, love, emotions, health, career and more.</p>
+</div>
 
-<p class="nav"><%= link_to "Get a ten card tarot reading", cards_ten_path %></p>
+<div class="tarot-history">
+<h2>About <em>Tarot</em></h2>
+<p class="history">There are many decks with 78 pictorial cards, each with its own imagery, symbolism, and story. Through them, one can get clear intuitive guidance of a person which eventually tarot card readers predict for their clients. In other words, reading tarot cards is a type of cartomancy.
 
-<p class="nav"><%= link_to "View all tarot cards", cards_path %></p>
+A person can ask the reader any question regarding professional life, money health, relationship, family, business, etc., a tarot card reader reads them in combination depending on the kind of question. Tarot card reading can help you lead a happy life by revealing to you all the inner secrets of life. The process of prediction starts with knowing a person’s present life and his state of mind. During the predictions, one relates to it and therefore gets clearer guidance on how to go about in life.
 
-<p class="nav"><%= link_to "See your card of the day.", cards_random_path%> </p>
+
+ </p>
+</div>
+
+<div class="three-card-reading">
+<p class="three-reading"> </p>
+</div>
+
+<div class="ten-card-reading">
+<p class="ten-reading"> </p>
+</div>
+
+<div class="single-card-reading">
+<p class="one-reading"> </p>
+</div>
+

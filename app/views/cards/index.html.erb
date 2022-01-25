@@ -1,3 +1,6 @@
+<%= link_to "Back to home", root_path, :class => "nav btn btn-primary" %>
+
+
 <h1 class="card-title">Tarot Deck</h1>
   <% if @cards.any? %>
     <ul class="tarot-ul">
@@ -8,5 +11,4 @@
   <% else %>
     <p>There are no cards yet.</p>
   <% end %>
-
-  <%= link_to "Back to home", root_path, :class => "nav btn btn-primary" %>
+  
