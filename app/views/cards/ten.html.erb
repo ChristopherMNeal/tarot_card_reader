@@ -1,8 +1,8 @@
+
+
 <div class="ten-card-holder">
   <div class="row">
     <div class="col-sm-3">
-    <%= link_to "Back to home", root_path, :class => " nav-font btn btn-primary" %>
-    <a id="show-printout" class="nav-font btn btn-primary">Show Printout</a>
       <h2 class="card-title">Descriptions of Cards</h2>
       <div class="key-ten">
         <ol class="q">
@@ -17,7 +17,9 @@
           <li> Hopes & Fears</li>
           <li> Outcome</li>
         </ol>
-      </div>
+        
+        </div>
+        <button class="noselect nav-font" id="show-printout"><span>Show Printout</span></button>
     </div>
     <div class="col-sm-2 side-card">
       <div class="card push-down">
@@ -165,8 +167,7 @@
 <div class="printout">
   <div class="row">
     <div class="col-sm-12">
-    <%= link_to "Back to home", root_path, :class => " nav-font btn btn-primary" %>
-    <a id="hide-printout" class="nav-font btn btn-primary">Hide Printout</a>
+    <button class="noselect nav-font" id="hide-printout"><span>Hide Printout</span></button>
       <ol id="printout-list" class="q">
         <li><span class="p-subheading">The Present / The Self</span>
           <ul>

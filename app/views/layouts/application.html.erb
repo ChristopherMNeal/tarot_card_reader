@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <div class="my-nav">
+      <%= link_to "Home", root_path %> | 
+      <%= link_to "All Cards", cards_path %> |
+      <%= link_to "Card of the Day", cards_random_path %> 
+      <div class="form-nav">
+        <%= link_to "Ten Card Spread", cards_ten_path %> |
+        <%= link_to "Three Card Spread", cards_three_path %>
+      </div>
+    </div>
     <div class="container-fluid">
       <%= yield %>
     </div>

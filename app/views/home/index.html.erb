@@ -1,17 +1,16 @@
-<h1 class="card-title" id="welcome-welcome">Welcome!</h1>
+<h1 class="card-title" id="welcome-welcome">Tarot Reader</h1>
 <div class="row" id="home-row">
   <div class="col-md-3">
-  <button class="noselect"><span><%= link_to "Three card reading", cards_three_path %></span></button>
   
   </div>
   <div class="col-md-3">
-    <button class="noselect"><span><%= link_to "Ten card reading", cards_ten_path %></span></button>
+    
   </div>
   <div class="col-md-3">
-    <button class="noselect"><span><%= link_to "View all tarot cards", cards_path %></span></button>
+    
   </div>
   <div class="col-md-3">
-    <button class="noselect"><span><%= link_to "Your card of the day.", cards_random_path%></span></button>
+    
   </div>
 </div>
 
@@ -33,12 +32,12 @@ A person can ask the reader any question regarding professional life, money heal
 <div class="three-card-reading">
 <h2><em>Three Card</em> Reading Information</h2>
 <%= image_tag "3card.png", id:"card-3-img" %>
-<p class="three-reading">The most common 3 card tarot reading is the traditional, Past, Present and Future structure. In this spread, you'll use the cards to reflect on the past, assess the present and plan for the future. ... For example, if you get The Lovers card, then the reading will probably centre around your romantic or self love. </p>
+<p class="three-reading">The most common 3 card tarot reading is the traditional, Past, Present and Future structure. In this spread, you'll use the cards to reflect on the past, assess the present and plan for the future. ... For example, if you get The Lovers card, then the reading will probably centre around your romantic or self love. Get your three card reading <%= link_to " here", cards_three_path, class: "home-link" %>. </p>
 </div>
 
 <div class="ten-card-reading">
   <h2><em>Ten Card</em> Reading Information</h2>
-  <%= image_tag "celtic_cross_lg.jpeg", id:"celtic-img" %>
+  <%= image_tag "celtic_cross_lg.png", id:"celtic-img" %>
   <p class="ten-reading"> <strong>1</strong>. The Present / The Self - This position reveals the current situation, and what is now happening. It can also be used to represent what the current state of mind is for the querent and a snapshot of who the querent is at the current moment in time.
   <strong>2</strong>. The Problem - This card represents the challenge that the querent is facing at this time, something that they need to resolve in order to make progress forward.
   <strong>3</strong>. The Past - Here we see the the past events, and also how they have shaped the current situation. This can give us some information on influences in the past that have lead up to this state of affairs.
@@ -48,7 +47,7 @@ A person can ask the reader any question regarding professional life, money heal
   <strong>7</strong>. Your Influence - This card can be interpreted somewhat broadly - but in general, relates to how you see yourself, and how that perception can influence how this situation plays out. What beliefs about yourself do you carry? Do you expand yourself, or limit yourself?
   <strong>8</strong>. External Influence - This card represents the world around you and how it affects this situation. It may represent the social and emotional environment that you are operating in, as well as how others perceive you.
   <strong>9</strong>. Hopes and Fears - One of the harder positions in this spread to decode, this card can represent both what you secretly desire, as well as what you may be trying to avoid. Human nature is often paradoxical, and what we fear the most is sometimes what we also truly have been hoping for all along.
-  <strong>10</strong>. Outcome - This card is meant to be a summary of all the previous cards. Given all that is happening, what is the likely resolution of this event? Should you find a card here that does not have a favorable outcome, you can analyze the remainder of the spread to find another course of action.</p>
+  <strong>10</strong>. Outcome - This card is meant to be a summary of all the previous cards. Given all that is happening, what is the likely resolution of this event? Should you find a card here that does not have a favorable outcome, you can analyze the remainder of the spread to find another course of action. Get your ten card reading <%= link_to " here", cards_ten_path, class: "home-link" %>.</p>
 </div>
 
 <div class="single-card-reading">
@@ -57,6 +56,6 @@ A person can ask the reader any question regarding professional life, money heal
 <strong>Clarity:</strong> Often one card smacks you in the face with clarity. Right there. That’s the answer. Sometimes you have to work a little; dig a little deeper; maybe even wait a little for the meaning to reveal itself. Yet, when you mine out that vital piece of information, you know it. It’s clear.
 <strong>Brevity:</strong> It’s one card. It’s brief.
 <strong>Unarguable:</strong> Stay with it. It tells the truth. Every time. The tarot does not lie. You can gild it with what you want to hear, but in the end, the card’s energy is true.
-<strong>Memorable:</strong> You can carry the card with you for as long as it takes. It can live in your head or your journal, or you can even put the actual card in your wallet. If the question is important, the reply from the cards will be emphatic. It will stay with you. </p>
+<strong>Memorable:</strong> You can carry the card with you for as long as it takes. It can live in your head or your journal, or you can even put the actual card in your wallet. If the question is important, the reply from the cards will be emphatic. It will stay with you. Get your single card reading <%= link_to " here", cards_random_path, class: "home-link" %>.</p>
 </div>
 

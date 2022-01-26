@@ -36,7 +36,7 @@ body {
 }
 
 .card-back {
-  height: 60vh;
+  height: 50vh;
   border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -64,7 +64,7 @@ body {
 
 .description {
   width: 22vw;
-  font-size:1.4rem;
+  font-size: 1.4rem;
   text-align: justify;
   margin-left: auto;
   margin-right: auto;
@@ -73,7 +73,7 @@ body {
 .card-title {
   font-family: timeScript;
   text-shadow: #fff 0 0 10px;
-  font-weight:bold;
+  font-weight: bold;
   font-size: 40px;
   text-align: center;
   // background-image: linear-gradient(to bottom right, #00466e, #70a9ca);
@@ -83,10 +83,11 @@ body {
   margin-right: auto;
   display: block;
   border-radius: 5px;
+  margin-top: -15px;
 }
 
 .card-image {
-  height: 60vh;
+  height: 50vh;
   border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -107,7 +108,7 @@ body {
 .printout {
   width: 88%;
   position: absolute;
-  top: 2vh;
+  top: 15px;
   left: 6%;
   display: none;
 }
@@ -115,21 +116,33 @@ body {
 .tarot-origins, .three-card-reading, .ten-card-reading, .single-card-reading, .tarot-history {
   overflow: auto;
   background: #e9e3e5;
-  padding:5rem;
-  margin:10vh;
-  color:black;
-  font-family:'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+  padding: 5rem;
+  margin: 8vh;
+  color: black;
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
 }
 
 .history, .origins, .three-reading, .ten-reading, .one-reading  {
-  font-size:1.75rem;
+  font-size: 1.75rem;
 }
 
 .tarot-list {
   list-style-type: none;
   font-size: 1.5em;
-  font-weight: 900;
-  color: black;
+  font-weight: 100;
+  padding: 1px 8px;
+}
+
+#show-printout {
+  position: fixed;
+  top: 88vh;
+
+}
+
+#hide-printout {
+  position: fixed;
+  top: 88vh;
+  
 }
 
 .p-subheading {
@@ -157,10 +170,9 @@ body {
 
 .tarot-ul {
   background: rgba(87, 148, 228, 0.478);
-  // padding: 5rem;
-  // margin: 10vh;
-  color: black;
   font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
+  padding: 4px 6px;
+  font-weight: bolder;
 }
 
 ol.q {
@@ -182,6 +194,11 @@ ol.q {
 
 a, a:hover, a:visited, a:active {
   color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: #fff 0 0 10px;
 }
 
 .container-fluid {
@@ -383,7 +400,7 @@ a, a:hover, a:visited, a:active {
 }
 
 .desc-push {
-  margin: 63vh auto 0 auto;
+  margin: 52vh auto 0 auto;
 }
 
 .center-2 {
@@ -400,6 +417,7 @@ a, a:hover, a:visited, a:active {
 
 .right-10 {
   position: relative;
+  margin-top: -3vh;
 }
 
 .right-9 {
@@ -424,18 +442,12 @@ a, a:hover, a:visited, a:active {
 
 .top-3 {
   position: relative;
+  margin-top: -5vh;
 }
 
 .bottom-4 {
   position: relative;
   top: 69vh;
-}
-
-// home page 
-
-#home-row {
-  margin-left: 10%;
-  font-size: 10px;
 }
 
 .origins {
@@ -450,13 +462,14 @@ a, a:hover, a:visited, a:active {
         -ms-user-select: none;
             user-select: none;
 		-webkit-tap-highlight-color: transparent;
+    margin: 0 auto;
 }
 
 button {
-	width: 150px;
+	width: 160px;
 	height: 50px;
 	cursor: pointer;
-	border: 0px solid #70a9ca;
+	border: 0px solid #3c84ad;
 	background: #3c84ad;
 	transition: 200ms;
 }
@@ -466,8 +479,9 @@ button span {
 	transform: translateX(-50%) translateY(-50%);
 	font-family: 'Berkshire Swash', cursive;
 	font-size: 18px;
-	color: #70a9ca;
+	color: white;
 	transition: 500ms;
+  width: 150px;
 }
 
 button::before, button::after {
@@ -475,32 +489,67 @@ button::before, button::after {
 	position: absolute;
 	margin-left: -75px;
 	margin-top: -25px;
-	width: 140px;
+	width: 150px;
 	height: 40px;
-	z-index: -1;
+	// z-index: -1;
+}
+
+.home-link {
+  color: black !important;
+  font-weight: bold;
+}
+
+#home-row {
+  text-align: center;
 }
 
 button::before {
-	border: 5px solid #70a9ca;
+	border: 5px solid #3c84ad;
 	transition: 200ms;
+  // z-index: -3;
 }
 
+
 button::after {
-	border: 5px solid #59a0c9;
+	border: 5px solid #3c84ad;
 	transition: 500ms;
+  
+}
+
+.form-nav {
+  float: right;
+}
+
+#welcome-welcome {
+  margin-top: 4rem;
+  font-size: 6rem;
+}
+
+.my-nav {
+  width: 100%;
+  display: table;
+  white-space: nowrap;
+  // font-family: 'Berkshire Swash', cursive;
+  font-family: fancifulScript;
+  color: white ;
+  background-color: #0b0b0b9a;
+  padding: 0 2rem 0 2rem;
+
+  font-size: 4rem;
+  text-transform: lowercase;
+  // font-weight: bolder;
 }
 
 button:hover {
-	border: 5px solid #8bc5e7;
+	border: 5px solid #3c84ad;
 }
 
 button:hover span {
-	letter-spacing: 4px;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 button:hover::before {
-	width: 150px;
+	width: 160px;
 	height: 50px;
 	margin-left: -80px;
 	margin-top: -30px;
@@ -517,10 +566,8 @@ button:focus {
 	outline: none;
 }
 
-
-
-
 //card-1 ten spread
+
 .card-1 {
   background-color: transparent; 
   perspective: 1000px;  
@@ -551,6 +598,7 @@ button:focus {
 }
 
 //card-2 ten spread
+
 .card-2 {
   background-color: transparent; 
   perspective: 1000px;  
@@ -581,6 +629,7 @@ button:focus {
 }
 
 //card-3 ten spread
+
 .card-3 {
   background-color: transparent; 
   perspective: 1000px;  
@@ -611,6 +660,7 @@ button:focus {
 }
 
 //card-4 ten spread
+
 .card-4 {
   background-color: transparent; 
   perspective: 1000px;  
@@ -641,6 +691,7 @@ button:focus {
 }
 
 //card-5 ten spread
+
 .card-5 {
   background-color: transparent; 
   perspective: 1000px;  
@@ -671,6 +722,7 @@ button:focus {
 }
 
 //card-6 ten spread
+
 .card-6 {
   background-color: transparent; 
   perspective: 1000px;  
@@ -701,6 +753,7 @@ button:focus {
 }
 
 //card-7 ten spread
+
 .card-7 {
   background-color: transparent; 
   perspective: 1000px;  
@@ -730,6 +783,7 @@ button:focus {
 }
 
 //card-8 ten spread
+
 .card-8 {
   background-color: transparent; 
   perspective: 1000px;  
@@ -742,7 +796,6 @@ button:focus {
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
-
 
 .card-8.flipped .card-8-inner {   
   transform: rotateY(180deg);
@@ -760,6 +813,7 @@ button:focus {
 }
 
 //card-9 ten spread
+
 .card-9 {
   background-color: transparent; 
   perspective: 1000px;  
@@ -772,7 +826,6 @@ button:focus {
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
-
 
 .card-9.flipped .card-9-inner {   
   transform: rotateY(180deg);
@@ -790,6 +843,7 @@ button:focus {
 }
 
 //card-10 ten spread
+
 .card-10 {
   background-color: transparent; 
   perspective: 1000px;  
@@ -802,7 +856,6 @@ button:focus {
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
-
 
 .card-10.flipped .card-10-inner {   
   transform: rotateY(180deg);
@@ -822,6 +875,7 @@ button:focus {
 .tooltip-wrap {
   position: relative;
 }
+
 .tooltip-wrap .tooltip-content {
   padding: 3rem;
   font-size: 1.25rem;
@@ -830,10 +884,11 @@ button:focus {
   position: absolute;
   top: 150%;
   right: 80%;
-  color:black;
+  color: black;
   background-color: #dad0d4;
   padding: .5em;
 }
+
 .tooltip-wrap .tooltip-content-righter {
   padding: 3rem;
   font-size: 1.25rem;
@@ -849,15 +904,18 @@ button:focus {
 .tooltip-wrap:hover .tooltip-content-righter {
   display: block;
 }
+
 .tooltip-wrap:hover .tooltip-content {
   display: block;
 }
+
 #celtic-img{
   float: right;
   margin-left: 2rem;
   margin-bottom: 2rem;
   width: 300px;
 }
+
 #card-3-img{
   float: left;
   margin-right: 2rem;
