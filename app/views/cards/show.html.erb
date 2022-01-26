@@ -2,12 +2,14 @@
 
 <div class="show-holder">
   <div class="row">
-  <div class="col-sm-6">
-  <h1 class="description-title">Name: <%= @card.name %></h1>
+  <div class="col-sm-4">
+  <h1 class="show-description-title"><strong>Name: </strong><%= @card.name %></h1>
   <%= image_tag @card.attached_image, :class => "show-image" %>
   </div>
-  <div class="col-sm-6">
-  <p class="show-description">Description: <%= @card.description%></p>
-  <p class="show-description">Reverse Description: <%= @card.reverse_description %></p>
+  <div class="col-sm-4">
+  <p class="show-description"><strong>Description:</strong> <%= @card.description%></p>
+  </div>
+  <div class="col-sm-4">
+  <p class="show-reverse-description"><strong>Reverse Description:</strong> <%= @card.reverse_description %></p>
   </div>
 </div>

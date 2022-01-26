@@ -61,6 +61,15 @@ body {
   display: block;
 }
 
+.printout {
+  margin: 3%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: black;
+  display: none;
+}
+
 .description {
   width: 22vw;
   font-size:1.4rem;
@@ -92,16 +101,6 @@ body {
   display: block;
 }
 
-
-.show-image {
-  width: 20vw;
-  height: auto;
-  border-radius: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
 .card-holder {
   width: 90%;
   margin: 2vh auto;
@@ -112,37 +111,12 @@ body {
   width: 90%;
   margin: 2vh auto;
 }
-.tarot-origins, .three-card-reading, .ten-card-reading, .one-card-reading, .tarot-history{
+.tarot-origins, .three-card-reading, .ten-card-reading, .single-card-reading, .tarot-history {
   background: #e9e3e5;
   padding:5rem;
   margin:10vh;
   color:black;
   font-family:serif;
-  
-}
-
-.ten-reading {
-  background: #e9e3e5;
-  padding: 5rem;
-  margin: 10vh;
-  color: black;
-  font-family: serif;
-}
-
-.three-reading {
-  background: #e9e3e5;
-  padding: 5rem;
-  margin: 10vh;
-  color: black;
-  font-family: serif;
-}
-
-.one-reading {
-  background: #e9e3e5;
-  padding: 5rem;
-  margin: 10vh;
-  color: black;
-  font-family: serif;
 }
 
 .history, .origins, .three-reading, .ten-reading, .one-reading  {
@@ -156,7 +130,15 @@ body {
   color: black;
 }
 
-.tarot-ul > a {
+.p-name {
+  list-style-type: none;
+}
+
+.p-description {
+  list-style-type: none;
+}
+
+.tarot-ul {
   background: #e9e3e5;
   // padding: 5rem;
   // margin: 10vh;
@@ -200,14 +182,51 @@ a, a:hover, a:visited, a:active {
   }
 }
 
+.show-image {
+  width: 20vw;
+  height: auto;
+  border-radius: 20px;
+  margin-left: 10vw;
+  // margin-right: 5vw;
+  display: block;
+}
+
 .show-description {
   font-size: 20px;
   background: #70a9ca;
   padding: 2rem;
   font-family: serif;
+  border: outset 5px rgb(88, 119, 202);
   border-radius: 5px;
   // width: 40%;
-  margin: 10vh 5vw;
+  margin-top: 10vh;
+  // margin-left: 30%;
+  // margin-right: 30%;
+  width: 20vw;
+}
+
+.show-reverse-description {
+  font-size: 20px;
+  background: #70a9ca;
+  padding: 2rem;
+  width: 20vw;
+  font-family: serif;
+  border: outset 5px rgb(88, 119, 202);
+  border-radius: 5px;
+  margin-right: 5vw;
+  margin-top: 9vh;
+}
+
+.show-description-title {
+  font-family: fancifulScript;
+  text-align: center;
+  width: 20vw;
+  font-size: 3.5em;
+  margin-top: 6%;
+  margin-left: 10vw;
+ 
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #fff;
 }
 
 .description-title {
