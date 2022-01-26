@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_24_173353) do
+ActiveRecord::Schema.define(version: 2022_01_26_000838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2022_01_24_173353) do
     t.string "description"
     t.string "attached_image"
     t.string "reverse_description"
+    t.integer "reversed", default: 1
+    t.string "suit"
   end
 
 end

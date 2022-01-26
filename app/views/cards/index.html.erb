@@ -2,13 +2,58 @@
 
 
 <h1 class="card-title">Tarot Deck</h1>
-  <% if @cards.any? %>
-    <ul class="tarot-ul">
-      <% @cards.each do |card| %>
-        <li class="tarot-list"><%= link_to card.name, card_path(card) %></li>
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <% if @cards.any? %>
+      <div class="col-sm-2">
+        <h2 class="tarot-ul">Major Arcana</h2>
+        <ul class="tarot-ul major">
+          <% @cards.each do |card| %>
+            <% if card.suit == "major" %>
+                <li class="tarot-list"><%= link_to card.name, card_path(card) %></li>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="col-sm-2">
+        <h2 class="tarot-ul">Wands</h2>
+        <ul class="tarot-ul wands">
+          <% @cards.each do |card| %>
+            <% if card.suit == "wands" %>
+                <li class="tarot-list"><%= link_to card.name, card_path(card) %></li>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="col-sm-2">
+        <h2 class="tarot-ul">Pentacles</h2>
+        <ul class="tarot-ul pentacles">
+          <% @cards.each do |card| %>
+            <% if card.suit == "pentacles" %>
+                <li class="tarot-list"><%= link_to card.name, card_path(card) %></li>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="col-sm-2">
+        <h2 class="tarot-ul">Cups</h2>
+        <ul class="tarot-ul cups">
+          <% @cards.each do |card| %>
+            <% if card.suit == "cups" %>
+                <li class="tarot-list"><%= link_to card.name, card_path(card) %></li>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="col-sm-2">
+        <h2 class="tarot-ul">Swords</h2>
+        <ul class="tarot-ul swords">
+          <% @cards.each do |card| %>
+            <% if card.suit == "swords" %>
+                <li class="tarot-list"><%= link_to card.name, card_path(card) %></li>
+            <% end %>
+          <% end %>
+        <div class="col-sm-1">
+        </div>
+        </div>
+      <% else %>
+        <p>There are no cards yet.</p>
       <% end %>
-    </ul>
-  <% else %>
-    <p>There are no cards yet.</p>
-  <% end %>
-  
+    </div>

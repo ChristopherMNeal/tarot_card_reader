@@ -364,11 +364,6 @@ a, a:hover, a:visited, a:active {
   top: 33vh;
 }
 
-.left-5 {
-  position: relative;
-  top: 33vh;
-}
-
 .top-3 {
   position: relative;
 }
@@ -771,13 +766,22 @@ button:focus {
   position: relative;
 }
 .tooltip-wrap .tooltip-content {
+  padding: 3rem;
+  font-size:1.25rem;
   display: none;
+  width:25vw;
   position: absolute;
-  bottom: 5%;
-  left: 5%;
-  right: 5%;
-  background-color: #fff;
+  top: 150%;
+  right: 80%;
+  color:black;
+  background-color: #e9e3e5;
   padding: .5em;
+}
+.tooltip-further-right{
+  right:100%;
+}
+.tooltip-higher{
+  top:100%;
 }
 .tooltip-wrap:hover .tooltip-content {
   display: block;
