@@ -774,14 +774,23 @@ button:focus {
   top: 150%;
   right: 80%;
   color:black;
-  background-color: #e9e3e5;
+  background-color: #dad0d4;
   padding: .5em;
 }
-.tooltip-further-right{
+.tooltip-wrap .tooltip-content-righter {
+  padding: 3rem;
+  font-size:1.25rem;
+  display: none;
+  width:25vw;
   right:100%;
+  position: absolute;
+  color:black;
+  background-color: #dad0d4;
+  padding: .5em;
 }
-.tooltip-higher{
-  top:100%;
+
+.tooltip-wrap:hover .tooltip-content-righter {
+  display: block;
 }
 .tooltip-wrap:hover .tooltip-content {
   display: block;
