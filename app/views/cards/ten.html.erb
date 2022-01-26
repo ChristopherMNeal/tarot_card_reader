@@ -1,19 +1,19 @@
-<%= link_to "Back to home", root_path, :class => "nav btn btn-primary" %>
-<%= link_to "Show Printout", root_path, :class => "nav btn btn-primary" %>
 <div class="ten-card-holder">
   <div class="row">
     <div class="col-sm-3">
+    <%= link_to "Back to home", root_path, :class => " nav-font btn btn-primary" %>
+    <a id="show-printout" class="nav-font btn btn-primary">Show Printout</a>
       <h2 class="card-title">Descriptions of Cards</h2>
       <div class="key-ten">
         <ol class="q">
-          <li> Querent / Significator</li>
-          <li> Obstacle / Challenge</li>
-          <li> Influences / Conscious</li>
-          <li> Root / Subconscious</li>
-          <li> Past</li>
-          <li> Future</li>
-          <li> Attitude</li>
-          <li> Environment</li>
+          <li> The Present / The Self</li>
+          <li> The Problem</li>
+          <li> The Past</li>
+          <li> The Future</li>
+          <li> Conscious</li>
+          <li> Unconscious</li>
+          <li> Your Influence</li>
+          <li> External Influence</li>
           <li> Hopes & Fears</li>
           <li> Outcome</li>
         </ol>
@@ -163,66 +163,72 @@
 </div>
 
 <div class="printout">
-  <ol class="q">
-    <li>Querent / Significator
-      <ul>
-        <li class="p-name"><%= @ten[0].name %></li>
-        <li class="p-description"><%= @ten[0].description %></li>
-      </ul>
-    </li>
-    <li>Obstacle / Challenge
-      <ul>
-        <li class="p-name"><%= @ten[1].name %></li>
-        <li class="p-description"><%= @ten[1].description %></li>
-      </ul>
-    </li>
-    <li>Influences / Conscious
-      <ul>
-        <li class="p-name"><%= @ten[2].name %></li>
-        <li class="p-description"><%= @ten[2].description %></li>
-      </ul>
-    </li>
-    <li>Root / Subconscious
-      <ul>
-        <li class="p-name"><%= @ten[3].name %></li>
-        <li class="p-description"><%= @ten[3].description %></li>
-      </ul>
-    </li>
-    <li>Past
-      <ul>
-        <li class="p-name"><%= @ten[4].name %></li>
-        <li class="p-description"><%= @ten[4].description %></li>
-      </ul>
-    </li>
-    <li>Future
-      <ul>
-        <li class="p-name"><%= @ten[5].name %></li>
-        <li class="p-description"><%= @ten[5].description %></li>
-      </ul>
-    </li>
-    <li>Attitude
-      <ul>
-        <li class="p-name"><%= @ten[6].name %></li>
-        <li class="p-description"><%= @ten[6].description %></li>
-      </ul>
-    </li>
-    <li>Environment
-      <ul>
-        <li class="p-name"><%= @ten[7].name %></li>
-        <li class="p-description"><%= @ten[7].description %></li>
-      </ul>
-    </li>
-    <li>Hopes & Fears
-      <ul>
-        <li class="p-name"><%= @ten[8].name %></li>
-        <li class="p-description"><%= @ten[8].description %></li>
-      </ul>
-    </li>
-    <li>Outcome
-      <ul>
-        <li class="p-name"><%= @ten[9].name %></li>
-        <li class="p-description"><%= @ten[9].description %></li>
-      </ul>
-    </li>
-  </ol>
+  <div class="row">
+    <div class="col-sm-12">
+    <%= link_to "Back to home", root_path, :class => " nav-font btn btn-primary" %>
+    <a id="hide-printout" class="nav-font btn btn-primary">Hide Printout</a>
+      <ol id="printout-list" class="q">
+        <li><span class="p-subheading">The Present / The Self</span>
+          <ul>
+            <li class="p-name"><%= @ten[0].name %></li>
+            <li class="p-description"><%= @ten[0].description %></li>
+          </ul>
+        </li>
+        <li><span class="p-subheading">The Problem</span>
+          <ul>
+            <li class="p-name"><%= @ten[1].name %></li>
+            <li class="p-description"><%= @ten[1].description %></li>
+          </ul>
+        </li>
+        <li><span class="p-subheading">The Past</span>
+          <ul>
+            <li class="p-name"><%= @ten[2].name %></li>
+            <li class="p-description"><%= @ten[2].description %></li>
+          </ul>
+        </li>
+        <li><span class="p-subheading">The Future</span>
+          <ul>
+            <li class="p-name"><%= @ten[3].name %></li>
+            <li class="p-description"><%= @ten[3].description %></li>
+          </ul>
+        </li>
+        <li><span class="p-subheading">Conscious</span>
+          <ul>
+            <li class="p-name"><%= @ten[4].name %></li>
+            <li class="p-description"><%= @ten[4].description %></li>
+          </ul>
+        </li>
+        <li><span class="p-subheading">Unconscious</span>
+          <ul>
+            <li class="p-name"><%= @ten[5].name %></li>
+            <li class="p-description"><%= @ten[5].description %></li>
+          </ul>
+        </li>
+        <li><span class="p-subheading">Your Influence</span>
+          <ul>
+            <li class="p-name"><%= @ten[6].name %></li>
+            <li class="p-description"><%= @ten[6].description %></li>
+          </ul>
+        </li>
+        <li><span class="p-subheading">External Influence</span>
+          <ul>
+            <li class="p-name"><%= @ten[7].name %></li>
+            <li class="p-description"><%= @ten[7].description %></li>
+          </ul>
+        </li>
+        <li><span class="p-subheading">Hopes & Fears</span>
+          <ul>
+            <li class="p-name"><%= @ten[8].name %></li>
+            <li class="p-description"><%= @ten[8].description %></li>
+          </ul>
+        </li>
+        <li><span class="p-subheading">Outcome</span>
+          <ul>
+            <li class="p-name"><%= @ten[9].name %></li>
+            <li class="p-description"><%= @ten[9].description %></li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
 </div>

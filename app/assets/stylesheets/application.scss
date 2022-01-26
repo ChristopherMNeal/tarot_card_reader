@@ -31,7 +31,8 @@ body {
   background-image: url("./tarotastronomy.jpeg");
   background-attachment: fixed;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.3em;
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
 }
 
 .card-back {
@@ -59,15 +60,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: block;
-}
-
-.printout {
-  margin: 3%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: black;
-  display: none;
 }
 
 .description {
@@ -111,12 +103,22 @@ body {
   width: 90%;
   margin: 2vh auto;
 }
+
+.printout {
+  width: 88%;
+  position: absolute;
+  top: 2vh;
+  left: 6%;
+  display: none;
+}
+
 .tarot-origins, .three-card-reading, .ten-card-reading, .single-card-reading, .tarot-history {
+  overflow: auto;
   background: #e9e3e5;
   padding:5rem;
   margin:10vh;
   color:black;
-  font-family:serif;
+  font-family:'Book Antiqua', 'Palatino Linotype', Palatino, serif;
 }
 
 .history, .origins, .three-reading, .ten-reading, .one-reading  {
@@ -130,20 +132,35 @@ body {
   color: black;
 }
 
+.p-subheading {
+  list-style-type: upper-roman;
+  font-family: fancifulScript;
+  font-size: 4.3rem;
+}
+
 .p-name {
   list-style-type: none;
+  font-size: 2.3rem;
 }
 
 .p-description {
   list-style-type: none;
+  font-size: 1.5rem;
+}
+
+#printout-list {
+  background-color: rgba(11, 11, 11, 0.761);
+  margin: 15px auto 15px auto;
+  width: 50vw;
+  padding: 15px 15px 15px 20px;
 }
 
 .tarot-ul {
-  background: #e9e3e5;
+  background: rgba(87, 148, 228, 0.478);
   // padding: 5rem;
   // margin: 10vh;
   color: black;
-  font-family: serif;
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
 }
 
 ol.q {
@@ -171,9 +188,9 @@ a, a:hover, a:visited, a:active {
   margin-bottom: 5vh;
 }
 
-.nav {
-  font-size: 1.5em;
-  font-style: italic;
+.nav-font {
+  font-size: 1.4em;
+  text-align: center;
 }
 
 @media only screen and (max-width: 770px) {
@@ -186,7 +203,7 @@ a, a:hover, a:visited, a:active {
   width: 20vw;
   height: auto;
   border-radius: 20px;
-  margin-left: 10vw;
+  margin-left: 5vw;
   // margin-right: 5vw;
   display: block;
 }
@@ -195,44 +212,42 @@ a, a:hover, a:visited, a:active {
   font-size: 20px;
   background: #70a9ca;
   padding: 2rem;
-  font-family: serif;
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
   border: outset 5px rgb(88, 119, 202);
   border-radius: 5px;
-  // width: 40%;
   margin-top: 10vh;
-  // margin-left: 30%;
-  // margin-right: 30%;
-  width: 20vw;
+  width: 25vw;
+  margin-left: .5vw;
+  margin-right: 1vw;
 }
 
 .show-reverse-description {
   font-size: 20px;
   background: #70a9ca;
   padding: 2rem;
-  width: 20vw;
-  font-family: serif;
+  width: 25vw;
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
   border: outset 5px rgb(88, 119, 202);
   border-radius: 5px;
+  margin-top: 10vh;
   margin-right: 5vw;
-  margin-top: 9vh;
 }
 
 .show-description-title {
-  font-family: fancifulScript;
+  font-family: timeScript;
+  text-shadow: #fff 0 0 10px;
   text-align: center;
-  width: 20vw;
-  font-size: 3.5em;
+  width: 30vw;
+  font-size: 3rem;
   margin-top: 6%;
-  margin-left: 10vw;
+  margin-left: 31vw;
  
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px #fff;
 }
 
 .description-title {
   font-family: fancifulScript;
   text-align: center;
-  font-size: 3.5em;
+  font-size: 2.9em;
   margin-top: -5px;
   border-radius: 5px;
   box-shadow: 0px 0px 5px #fff;
@@ -240,14 +255,14 @@ a, a:hover, a:visited, a:active {
 
 .description {
   background: #70a9ca;
-  height: 250px;
-  padding:20px;
+  height: 37vh;
+  padding: 3vh;
 }
 
 .inside-description {
   overflow: scroll;
   overflow-x: hidden;
-  height:185px;
+  height: 23vh;
   text-indent: 10%;
 }
 
@@ -699,7 +714,6 @@ button:focus {
   transform-style: preserve-3d;
 }
 
-
 .card-7.flipped .card-7-inner {   
   transform: rotateY(180deg);
 }
@@ -810,9 +824,9 @@ button:focus {
 }
 .tooltip-wrap .tooltip-content {
   padding: 3rem;
-  font-size:1.25rem;
+  font-size: 1.25rem;
   display: none;
-  width:25vw;
+  width: 25vw;
   position: absolute;
   top: 150%;
   right: 80%;
@@ -822,14 +836,14 @@ button:focus {
 }
 .tooltip-wrap .tooltip-content-righter {
   padding: 3rem;
-  font-size:1.25rem;
+  font-size: 1.25rem;
   display: none;
-  width:25vw;
-  right:100%;
+  width: 25vw;
+  right: 100%;
   position: absolute;
-  color:black;
+  color: black;
   background-color: #dad0d4;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 .tooltip-wrap:hover .tooltip-content-righter {
@@ -837,4 +851,16 @@ button:focus {
 }
 .tooltip-wrap:hover .tooltip-content {
   display: block;
+}
+#celtic-img{
+  float: right;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  width: 300px;
+}
+#card-3-img{
+  float: left;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  width: 250px;
 }

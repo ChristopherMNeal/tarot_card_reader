@@ -1,7 +1,15 @@
-<h1>Name: <%= @card.name %></h1>
-<h3>Description: <%= @card.description%></h3>
-<h3>Reverse Description: <%= @card.reverse_description %></h3>
-<hr>
-<%= image_tag(@card.attached_image) %>
-<br>
-<%= link_to "Back to home", root_path, :class => "nav btn btn-primary" %>
+<%= link_to "Return to cards", cards_path, :class => " nav-font btn btn-info" %>
+
+<div class="show-holder">
+  <div class="row">
+  <div class="col-sm-4">
+  <h1 class="show-description-title"><strong>Name: </strong><%= @card.name %></h1>
+  <%= image_tag @card.attached_image, :class => "show-image" %>
+  </div>
+  <div class="col-sm-4">
+  <p class="show-description"><strong>Description:</strong> <%= @card.description%></p>
+  </div>
+  <div class="col-sm-4">
+  <p class="show-reverse-description"><strong>Reverse Description:</strong> <%= @card.reverse_description %></p>
+  </div>
+</div>
