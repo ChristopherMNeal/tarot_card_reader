@@ -16,14 +16,6 @@
           <li> Outcome</li>
         </ol>
       </div>
-      <div class="position-description">
-        <h3>Description of the position</h3>
-        <p>Stuff goes here</p>
-      </div>
-      <div class="selected-description">
-        <h3>Description of the selected card</h3>
-        <p>More stuff goes here</p>
-      </div>
     </div>
     <div class="col-sm-2 side-card">
       <div class="card push-down">
@@ -112,7 +104,7 @@
       </div>
     </div>
     <div class="col-sm-2">
-      <div class="card-10 right-10 tooltip-wrap">
+      <div id="10" class="card-10 right-10 tooltip-wrap">
         <div class="card-10-inner">
           <div class="ten-back-card-10">
             <%= image_tag @ten[9].attached_image, :id => "card-10-back", :class => "ten-card-back" %>
@@ -122,8 +114,8 @@
           </div>
         </div>
         <div class="tooltip-content">
-          <p><b><%=@ten[9].name %></b>. <%= @ten[9].description %></p>
-        </div> 
+        <p><b><%=@ten[9].name %></b>. <%= @ten[9].description %></p>
+      </div> 
       </div>
       <div class="card-9 right-9 tooltip-wrap">
         <div class="card-9-inner">

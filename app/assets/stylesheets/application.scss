@@ -16,6 +16,11 @@
 
 @font-face {
   font-family: fancifulScript;
+  src: url("/assets/RemachineScript.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: timeScript;
   src: url("/assets/GreatVibes-Regular.otf") format("opentype");
 }
 
@@ -65,9 +70,10 @@ body {
 }
 
 .card-title {
-  font-family: fancifulScript;
+  font-family: timeScript;
   text-shadow: #fff 0 0 10px;
   font-weight:bold;
+  font-size: 40px;
   text-align: center;
   // background-image: linear-gradient(to bottom right, #00466e, #70a9ca);
   width: fit-content;
@@ -88,7 +94,7 @@ body {
 
 
 .show-image {
-  width: 15vw;
+  width: 20vw;
   height: auto;
   border-radius: 20px;
   margin-left: auto;
@@ -106,7 +112,7 @@ body {
   width: 90%;
   margin: 2vh auto;
 }
-.tarot-origins{
+.tarot-origins, .three-card-reading, .ten-card-reading, .one-card-reading, .tarot-history{
   background: #e9e3e5;
   padding:5rem;
   margin:10vh;
@@ -115,7 +121,7 @@ body {
   
 }
 
-.tarot-history {
+.ten-reading {
   background: #e9e3e5;
   padding: 5rem;
   margin: 10vh;
@@ -123,7 +129,23 @@ body {
   font-family: serif;
 }
 
-.history {
+.three-reading {
+  background: #e9e3e5;
+  padding: 5rem;
+  margin: 10vh;
+  color: black;
+  font-family: serif;
+}
+
+.one-reading {
+  background: #e9e3e5;
+  padding: 5rem;
+  margin: 10vh;
+  color: black;
+  font-family: serif;
+}
+
+.history, .origins, .three-reading, .ten-reading, .one-reading  {
   font-size:1.75rem;
 }
 
@@ -131,13 +153,15 @@ body {
   list-style-type: none;
   font-size: 1.5em;
   font-weight: 900;
+  color: black;
 }
 
-.tarot-ul {
-  background: #70a9ca;
-  width: fit-content;
-  padding: 7px 15px;
-  border-radius: 5px;
+.tarot-ul > a {
+  background: #e9e3e5;
+  // padding: 5rem;
+  // margin: 10vh;
+  color: black;
+  font-family: serif;
 }
 
 ol.q {
@@ -182,14 +206,14 @@ a, a:hover, a:visited, a:active {
   padding: 2rem;
   font-family: serif;
   border-radius: 5px;
-  width: 40%;
-  margin: 0 auto;
+  // width: 40%;
+  margin: 10vh 5vw;
 }
 
 .description-title {
   font-family: fancifulScript;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 3.5em;
   margin-top: -5px;
   border-radius: 5px;
   box-shadow: 0px 0px 5px #fff;
@@ -407,7 +431,7 @@ button span {
 	position: absolute;
 	transform: translateX(-50%) translateY(-50%);
 	font-family: 'Berkshire Swash', cursive;
-	font-size: 15px;
+	font-size: 18px;
 	color: #70a9ca;
 	transition: 500ms;
 }
@@ -438,7 +462,7 @@ button:hover {
 
 button:hover span {
 	letter-spacing: 4px;
-	font-size: 15px;
+	font-size: 20px;
 }
 
 button:hover::before {

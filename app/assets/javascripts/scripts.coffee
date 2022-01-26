@@ -39,4 +39,4 @@ $(document).on 'turbolinks:load', ->
     $(this).toggleClass('flipped')
 
   $(".card-10").click ->
-    $(this).toggleClass('flipped')
+    $(this).toggleClass('flipped')	
