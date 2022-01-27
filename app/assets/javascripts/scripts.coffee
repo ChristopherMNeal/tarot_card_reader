@@ -58,7 +58,3 @@ $(document).on 'turbolinks:load', ->
   $("#hide-printout").click ->
     $(".ten-card-holder").show();
     $(".printout").hide();
-
-# $(document).on 'turbolinks:load', ->
-#   $("#reversed").click ->
-#     @reversed = true;
