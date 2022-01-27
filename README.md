@@ -40,15 +40,14 @@ _(Note: Ruby gem dependencies will be installed automatically by Bundler.)_
 
 * Clone the GitHub repository: [https://github.com/Frank-Proulx/tarot_card_reader](https://github.com/Frank-Proulx/tarot_card_reader)
 * From the main project directory, enter `bundle install` in the terminal to populate gems.
-* To create a database, type in your terminal: 
-      `rake db:setup`
-* Ensure that the terminal output prints `Created 78 cards! (should be 78)`. If it didn't, run `rake db:seed` and it should print the correct output.
+* To create a database, run `rake db:setup` in your terminal.
+* To seed the database, run `rake db:seed` and ensure that the terminal output prints `Created 78 cards! (should be 78)`.
 * Run `rails s` to start the Rails server.
 * Open browswer and enter the url http://localhost:3000/ unless otherwise prompted in the terminal.
 
 ## Known Bugs
 
-* _None at this time._
+* _Turboload causes navbar links to load page twice in some cases._
 
 ## License
 
