@@ -5,10 +5,8 @@ $(document).on 'turbolinks:load', ->
   $(".flip-card-1").click ->
     $(this).toggleClass('flipped')
 
-
   $(".flip-card-2").click ->
     $(this).toggleClass('flipped')
-    
 
 $(document).on 'turbolinks:load', ->
   $('.tooltip-content').hide();
