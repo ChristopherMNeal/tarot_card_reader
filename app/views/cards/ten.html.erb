@@ -17,23 +17,21 @@
           <li> Hopes & Fears</li>
           <li> Outcome</li>
         </ol>
-        
-        </div>
-        <button class="noselect nav-font" id="show-printout"><span>Show Printout</span></button>
-        <button class="noselect nav-font" id="reversed"><span>Reverse Cards?</span></button>
+      </div>
+      <button class="noselect nav-font" id="show-printout"><span>Show Printout</span></button>
+      <button class="noselect nav-font" id="reversed"><span>Reverse Cards?</span></button>
     </div>
     <div class="col-sm-2 side-card">
       <div class="card push-down">
-        <div class="card-5 left-5 tooltip-wrap">
-        
+        <div class="card-5 left-5 tooltip-wrap">    
           <% if @ten[4].reversed == 2 %>
             <div class="card-5-inner">
-                <div class="ten-back-card-5">
-                  <%= image_tag @ten[4].attached_image, :id => "card-5-back", :class => "ten-card-back card-image-reversed" %>
-                </div>
-                <div class="ten-card-image-5">
-                  <%= image_tag ("card5.jpg"), :id => "card-5", :class => "ten-card-image" %>
-                </div>
+              <div class="ten-back-card-5">
+                <%= image_tag @ten[4].attached_image, :id => "card-5-back", :class => "ten-card-back card-image-reversed" %>
+              </div>
+              <div class="ten-card-image-5">
+                <%= image_tag ("card5.jpg"), :id => "card-5", :class => "ten-card-image" %>
+              </div>
             </div>
             <div class="tooltip-content">
               <p><b><%=@ten[4].name %> Reversed</b>. <%= @ten[4].reverse_description %></p>
@@ -41,7 +39,7 @@
           <% else %>
             <div class="card-5-inner">
               <div class="ten-back-card-5">
-                <%= image_tag @ten[4].attached_image, :id => "card-5-back", :class => "ten-card-back card-image-reversed" %>
+                <%= image_tag @ten[4].attached_image, :id => "card-5-back", :class => "ten-card-back" %>
               </div>
               <div class="ten-card-image-5">
                 <%= image_tag ("card5.jpg"), :id => "card-5", :class => "ten-card-image" %>
@@ -83,62 +81,131 @@
         <% end %>
       </div>
       <div class="card-2 center-2 tooltip-wrap">
-        <div class="card-2-inner">
-          <div class="ten-back-card-2">
-            <%= image_tag @ten[1].attached_image, :id => "card-2-back", :class => "ten-card-back" %>
+        <% if @ten[1].reversed == 2 %>
+          <div class="card-2-inner">
+            <div class="ten-back-card-2">
+              <%= image_tag @ten[1].attached_image, :id => "card-2-back", :class => "ten-card-back card-image-reversed" %>
+            </div>
+            <div class="ten-card-image-2">
+              <%= image_tag ("card2.jpg"), :id => "card-2", :class => "ten-card-image" %>
+            </div>
           </div>
-          <div class="ten-card-image-2">
-            <%= image_tag ("card2.jpg"), :id => "card-2", :class => "ten-card-image" %>
+          <div class="tooltip-content-righter">
+            <p><b><%=@ten[1].name %> Reversed</b>. <%= @ten[1].reverse_description %></p>
+          </div> 
+        <% else %>
+          <div class="card-2-inner">
+            <div class="ten-back-card-2">
+              <%= image_tag @ten[1].attached_image, :id => "card-2-back", :class => "ten-card-back" %>
+            </div>
+            <div class="ten-card-image-2">
+              <%= image_tag ("card2.jpg"), :id => "card-2", :class => "ten-card-image" %>
+            </div>
           </div>
-        </div>
-        <div class="tooltip-content-righter">
-          <p><b><%=@ten[1].name %></b>. <%= @ten[1].description %></p>
-        </div> 
+          <div class="tooltip-content-righter">
+            <p><b><%=@ten[1].name %></b>. <%= @ten[1].description %></p>
+          </div>
+        <% end %>
       </div>
       <div class="card-1 center-1 tooltip-wrap">
-        <div class="card-1-inner">
-          <div class="ten-back-card-1">
-            <%= image_tag @ten[0].attached_image, :id => "card-1-back", :class => "ten-card-back" %>
+        <% if @ten[0].reversed == 2 %>
+          <div class="card-1-inner">
+            <div class="ten-back-card-1">
+              <%= image_tag @ten[0].attached_image, :id => "card-1-back", :class => "ten-card-back card-image-reversed" %>
+            </div>
+            <div class="ten-card-image-1">
+              <%= image_tag ("card1.jpg"), :id => "card-1", :class => "ten-card-image" %>
+            </div>
           </div>
-          <div class="ten-card-image-1">
-            <%= image_tag ("card1.jpg"), :id => "card-1", :class => "ten-card-image" %>
+          <div class="tooltip-content">
+            <p><b><%=@ten[0].name %> Reversed</b>. <%= @ten[0].reverse_description %></p>
+          </div> 
+        <% else %>
+          <div class="card-1-inner">
+            <div class="ten-back-card-1">
+              <%= image_tag @ten[0].attached_image, :id => "card-1-back", :class => "ten-card-back" %>
+            </div>
+            <div class="ten-card-image-1">
+              <%= image_tag ("card1.jpg"), :id => "card-1", :class => "ten-card-image" %>
+            </div>
           </div>
-        </div>
-        <div class="tooltip-content">
-          <p><b><%=@ten[0].name %></b>. <%= @ten[0].description %></p>
-        </div> 
+          <div class="tooltip-content">
+            <p><b><%=@ten[0].name %></b>. <%= @ten[0].description %></p>
+          </div> 
+        <% end %>
       </div>
       <div class="card-4 bottom-4 tooltip-wrap">
-        <div class="card-4-inner">
-          <div class="ten-back-card-4">
-            <%= image_tag @ten[3].attached_image, :id => "card-4-back", :class => "ten-card-back" %>
+        <% if @ten[3].reversed == 2 %>
+          <div class="card-4-inner">
+            <div class="ten-back-card-4">
+              <%= image_tag @ten[3].attached_image, :id => "card-4-back", :class => "ten-card-back card-image-reversed" %>
+            </div>
+            <div class="ten-card-image-4">
+              <%= image_tag ("card4.jpg"), :id => "card-4", :class => "ten-card-image" %>
+            </div>
           </div>
-          <div class="ten-card-image-4">
-            <%= image_tag ("card4.jpg"), :id => "card-4", :class => "ten-card-image" %>
+          <div class="tooltip-content">
+            <p><b><%=@ten[3].name %> Reversed</b>. <%= @ten[3].reverse_description %></p>
+          </div> 
+        <% else %>
+          <div class="card-4-inner">
+            <div class="ten-back-card-4">
+              <%= image_tag @ten[3].attached_image, :id => "card-4-back", :class => "ten-card-back" %>
+            </div>
+            <div class="ten-card-image-4">
+              <%= image_tag ("card4.jpg"), :id => "card-4", :class => "ten-card-image" %>
+            </div>
           </div>
-        </div>
-        <div class="tooltip-content">
-          <p><b><%=@ten[3].name %></b>. <%= @ten[3].description %></p>
-        </div> 
+          <div class="tooltip-content">
+            <p><b><%=@ten[3].name %></b>. <%= @ten[3].description %></p>
+          </div> 
+        <% end %>
       </div>
     </div>
     <div class="col-sm-2 side-card">
       <div class="card-6 right-6 tooltip-wrap">
-        <div class="card-6-inner">
-          <div class="ten-back-card-6">
-            <%= image_tag @ten[5].attached_image, :id => "card-6-back", :class => "ten-card-back" %>
+        <% if @ten[5].reversed == 2 %>
+          <div class="card-6-inner">
+            <div class="ten-back-card-6">
+              <%= image_tag @ten[5].attached_image, :id => "card-6-back", :class => "ten-card-back card-image-reversed" %>
+            </div>
+            <div class="ten-card-image-6">
+              <%= image_tag ("card6.jpg"), :id => "card-6", :class => "ten-card-image" %>
+            </div>
           </div>
-          <div class="ten-card-image-6">
-            <%= image_tag ("card6.jpg"), :id => "card-6", :class => "ten-card-image" %>
+          <div class="tooltip-content">
+            <p><b><%=@ten[5].name %> Reversed</b>. <%= @ten[5].reverse_description %></p>
+          </div> 
+        <% else %>
+          <div class="card-6-inner">
+            <div class="ten-back-card-6">
+              <%= image_tag @ten[5].attached_image, :id => "card-6-back", :class => "ten-card-back" %>
+            </div>
+            <div class="ten-card-image-6">
+              <%= image_tag ("card6.jpg"), :id => "card-6", :class => "ten-card-image" %>
+            </div>
           </div>
-        </div>
         <div class="tooltip-content">
           <p><b><%=@ten[5].name %></b>. <%= @ten[5].description %></p>
         </div> 
-      </div>
+      <% end %>
     </div>
-    <div class="col-sm-2">
-      <div id="10" class="card-10 right-10 tooltip-wrap">
+  </div>
+  <div class="col-sm-2">
+    <div id="10" class="card-10 right-10 tooltip-wrap">
+      <% if @ten[9].reversed == 2 %>  
+        <div class="card-10-inner">
+          <div class="ten-back-card-10">
+            <%= image_tag @ten[9].attached_image, :id => "card-10-back", :class => "ten-card-back card-image-reversed" %>
+          </div>
+          <div class="ten-card-image-10">
+            <%= image_tag ("card10.jpg"), :id => "card-10", :class => "ten-card-image" %>
+          </div>
+        </div>
+        <div class="tooltip-content">
+          <p><b><%=@ten[9].name %> Reversed</b>. <%= @ten[9].reverse_description %></p>
+        </div> 
+      <% else %>
         <div class="card-10-inner">
           <div class="ten-back-card-10">
             <%= image_tag @ten[9].attached_image, :id => "card-10-back", :class => "ten-card-back" %>
@@ -148,10 +215,24 @@
           </div>
         </div>
         <div class="tooltip-content">
-        <p><b><%=@ten[9].name %></b>. <%= @ten[9].description %></p>
-      </div> 
-      </div>
-      <div class="card-9 right-9 tooltip-wrap">
+          <p><b><%=@ten[9].name %></b>. <%= @ten[9].description %></p>
+        </div> 
+      <% end %>
+    </div>
+    <div class="card-9 right-9 tooltip-wrap">    
+      <% if @ten[8].reversed == 2 %>
+        <div class="card-9-inner">
+          <div class="ten-back-card-9">
+            <%= image_tag @ten[8].attached_image, :id => "card-9-back", :class => "ten-card-back card-image-reversed" %>
+          </div>
+          <div class="ten-card-image-9">
+            <%= image_tag ("card9.jpg"), :id => "card-9", :class => "ten-card-image" %>
+          </div>
+        </div>
+        <div class="tooltip-content">
+          <p><b><%=@ten[8].name %> Reversed</b>. <%= @ten[8].reverse_description %></p>
+        </div> 
+      <% else %>
         <div class="card-9-inner">
           <div class="ten-back-card-9">
             <%= image_tag @ten[8].attached_image, :id => "card-9-back", :class => "ten-card-back" %>
@@ -163,8 +244,22 @@
         <div class="tooltip-content">
           <p><b><%=@ten[8].name %></b>. <%= @ten[8].description %></p>
         </div> 
-      </div>
-      <div class="card-8 right-8 tooltip-wrap">
+      <% end %>
+    </div>
+    <div class="card-8 right-8 tooltip-wrap">    
+      <% if @ten[7].reversed == 2 %>
+        <div class="card-8-inner">
+          <div class="ten-back-card-8">
+            <%= image_tag @ten[7].attached_image, :id => "card-8-back", :class => "ten-card-back card-image-reversed" %>
+          </div>
+          <div class="ten-card-image-8">
+            <%= image_tag ("card8.jpg"), :id => "card-8", :class => "ten-card-image" %>
+          </div>
+        </div>
+        <div class="tooltip-content">
+          <p><b><%=@ten[7].name %> Reversed</b>. <%= @ten[7].reverse_description %></p>
+        </div> 
+      <% else %>
         <div class="card-8-inner">
           <div class="ten-back-card-8">
             <%= image_tag @ten[7].attached_image, :id => "card-8-back", :class => "ten-card-back" %>
@@ -176,8 +271,22 @@
         <div class="tooltip-content">
           <p><b><%=@ten[7].name %></b>. <%= @ten[7].description %></p>
         </div> 
-      </div>
-      <div class="card-7 right-7 tooltip-wrap">
+      <% end %>
+    </div>
+    <div class="card-7 right-7 tooltip-wrap">
+      <% if @ten[6].reversed == 2 %>
+        <div class="card-7-inner">
+          <div class="ten-back-card-7">
+            <%= image_tag @ten[6].attached_image, :id => "card-7-back", :class => "ten-card-back card-image-reversed" %>
+          </div>
+          <div class="ten-card-image-7">
+            <%= image_tag ("card7.jpg"), :id => "card-7", :class => "ten-card-image" %>
+          </div>
+        </div>
+        <div class="tooltip-content">
+          <p><b><%=@ten[6].name %> Reversed</b>. <%= @ten[6].reverse_description %></p>
+        </div> 
+      <% else %>
         <div class="card-7-inner">
           <div class="ten-back-card-7">
             <%= image_tag @ten[6].attached_image, :id => "card-7-back", :class => "ten-card-back" %>
@@ -189,6 +298,7 @@
         <div class="tooltip-content">
           <p><b><%=@ten[6].name %></b>. <%= @ten[6].description %></p>
         </div> 
+      <% end %>
       </div>
     </div>
   </div>
@@ -201,62 +311,112 @@
       <ol id="printout-list" class="q">
         <li><span class="p-subheading">The Present / The Self</span>
           <ul>
-            <li class="p-name"><%= @ten[0].name %></li>
-            <li class="p-description"><%= @ten[0].description %></li>
+            <% if @ten[0].reversed == 2 %>
+              <li class="p-name"><%= @ten[0].name %> Reversed</li>
+              <li class="p-description"><%= @ten[0].reverse_description %></li>
+            <% else %>
+              <li class="p-name"><%= @ten[0].name %></li>
+              <li class="p-description"><%= @ten[0].description %></li>
+            <% end %>
           </ul>
         </li>
         <li><span class="p-subheading">The Problem</span>
           <ul>
-            <li class="p-name"><%= @ten[1].name %></li>
-            <li class="p-description"><%= @ten[1].description %></li>
+            <% if @ten[1].reversed == 2 %>
+              <li class="p-name"><%= @ten[1].name %> Reversed</li>
+              <li class="p-description"><%= @ten[1].reverse_description %></li>
+            <% else %>
+              <li class="p-name"><%= @ten[1].name %></li>
+              <li class="p-description"><%= @ten[1].description %></li>
+            <% end %>
           </ul>
         </li>
         <li><span class="p-subheading">The Past</span>
           <ul>
-            <li class="p-name"><%= @ten[2].name %></li>
-            <li class="p-description"><%= @ten[2].description %></li>
+            <% if @ten[2].reversed == 2 %>
+              <li class="p-name"><%= @ten[2].name %> Reversed</li>
+              <li class="p-description"><%= @ten[2].reverse_description %></li>
+            <% else %>
+              <li class="p-name"><%= @ten[2].name %></li>
+              <li class="p-description"><%= @ten[2].description %></li>
+            <% end %>
           </ul>
         </li>
         <li><span class="p-subheading">The Future</span>
           <ul>
-            <li class="p-name"><%= @ten[3].name %></li>
-            <li class="p-description"><%= @ten[3].description %></li>
+            <% if @ten[3].reversed == 2 %>
+              <li class="p-name"><%= @ten[3].name %> Reversed</li>
+              <li class="p-description"><%= @ten[3].reverse_description %></li>
+            <% else %>
+              <li class="p-name"><%= @ten[3].name %></li>
+              <li class="p-description"><%= @ten[3].description %></li>
+            <% end %>
           </ul>
         </li>
         <li><span class="p-subheading">Conscious</span>
           <ul>
-            <li class="p-name"><%= @ten[4].name %></li>
-            <li class="p-description"><%= @ten[4].description %></li>
+            <% if @ten[4].reversed == 2 %>
+              <li class="p-name"><%= @ten[4].name %> Reversed</li>
+              <li class="p-description"><%= @ten[4].reverse_description %></li>
+            <% else %>
+              <li class="p-name"><%= @ten[4].name %></li>
+              <li class="p-description"><%= @ten[4].description %></li>
+            <% end %>
           </ul>
         </li>
         <li><span class="p-subheading">Unconscious</span>
           <ul>
-            <li class="p-name"><%= @ten[5].name %></li>
-            <li class="p-description"><%= @ten[5].description %></li>
+            <% if @ten[5].reversed == 2 %>
+              <li class="p-name"><%= @ten[5].name %> Reversed</li>
+              <li class="p-description"><%= @ten[5].reverse_description %></li>
+            <% else %>
+              <li class="p-name"><%= @ten[5].name %></li>
+              <li class="p-description"><%= @ten[5].description %></li>
+            <% end %>
           </ul>
         </li>
         <li><span class="p-subheading">Your Influence</span>
           <ul>
-            <li class="p-name"><%= @ten[6].name %></li>
-            <li class="p-description"><%= @ten[6].description %></li>
+            <% if @ten[6].reversed == 2 %>
+              <li class="p-name"><%= @ten[6].name %> Reversed</li>
+              <li class="p-description"><%= @ten[6].reverse_description %></li>
+            <% else %>
+              <li class="p-name"><%= @ten[6].name %></li>
+              <li class="p-description"><%= @ten[6].description %></li>
+            <% end %>
           </ul>
         </li>
         <li><span class="p-subheading">External Influence</span>
           <ul>
-            <li class="p-name"><%= @ten[7].name %></li>
-            <li class="p-description"><%= @ten[7].description %></li>
+            <% if @ten[7].reversed == 2 %>
+              <li class="p-name"><%= @ten[7].name %> Reversed</li>
+              <li class="p-description"><%= @ten[7].reverse_description %></li>
+            <% else %>
+              <li class="p-name"><%= @ten[7].name %></li>
+              <li class="p-description"><%= @ten[7].description %></li>
+            <% end %>
           </ul>
         </li>
         <li><span class="p-subheading">Hopes & Fears</span>
           <ul>
-            <li class="p-name"><%= @ten[8].name %></li>
-            <li class="p-description"><%= @ten[8].description %></li>
+            <% if @ten[8].reversed == 2 %>
+              <li class="p-name"><%= @ten[8].name %> Reversed</li>
+              <li class="p-description"><%= @ten[8].reverse_description %></li>
+            <% else %>
+              <li class="p-name"><%= @ten[8].name %></li>
+              <li class="p-description"><%= @ten[8].description %></li>
+            <% end %>
           </ul>
         </li>
         <li><span class="p-subheading">Outcome</span>
           <ul>
-            <li class="p-name"><%= @ten[9].name %></li>
-            <li class="p-description"><%= @ten[9].description %></li>
+            <% if @ten[9].reversed == 2 %>
+              <li class="p-name"><%= @ten[9].name %> Reversed</li>
+              <li class="p-description"><%= @ten[9].reverse_description %></li>
+            <% else %>
+              <li class="p-name"><%= @ten[9].name %></li>
+              <li class="p-description"><%= @ten[9].description %></li>
+            <% end %>
           </ul>
         </li>
       </ol>
