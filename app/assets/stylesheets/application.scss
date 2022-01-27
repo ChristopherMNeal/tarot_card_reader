@@ -74,7 +74,7 @@ body {
   font-family: timeScript;
   text-shadow: #fff 0 0 10px;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
   // background-image: linear-gradient(to bottom right, #00466e, #70a9ca);
   width: fit-content;
@@ -130,7 +130,7 @@ body {
   list-style-type: none;
   font-size: 1.5em;
   font-weight: 100;
-  padding: 1px 8px;
+  padding: 1px 1px;
 }
 
 #reversed {
@@ -176,9 +176,10 @@ body {
 }
 
 .tarot-ul {
-  background: rgba(87, 148, 228, 0.478);
+  background: #0b0b0bd1;
   font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
-  padding: 4px 6px;
+  padding: 0;
+  width: fit-content;
   font-weight: bolder;
 }
 
@@ -404,7 +405,7 @@ a:hover {
 }
 
 .desc-push {
-  margin: 52vh auto 0 auto;
+  margin: 53vh auto 0 auto;
 }
 
 .center-2 {
