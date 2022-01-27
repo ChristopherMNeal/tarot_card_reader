@@ -122,6 +122,9 @@ body {
   color: black;
   font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
 }
+.tarot-origins{
+  margin-top: 2vh !important;
+}
 
 .history, .origins, .three-reading, .ten-reading, .one-reading  {
   font-size: 1.75rem;
@@ -922,8 +925,8 @@ button:focus {
 }
 
 #eye-img {
-  margin: -10vh auto;
-  height: 100vh;
+  margin: -1vh auto 5vh auto;
+  height: 75vh;
 }
 
 #celtic-img{
