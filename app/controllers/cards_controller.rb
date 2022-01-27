@@ -52,6 +52,8 @@ class CardsController < ApplicationController
   def ten
     @cards = Card.all.shuffle
     @ten = @cards.slice(0,10)
+    @ten.map { |card| card.reversed *= rand(1..2) }
+    @reversed = false
     render :ten
   end
 

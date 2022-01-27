@@ -20,17 +20,27 @@
         
         </div>
         <button class="noselect nav-font" id="show-printout"><span>Show Printout</span></button>
+        <button class="noselect nav-font" id="reversed"><span>Reverse Cards?</span></button>
     </div>
     <div class="col-sm-2 side-card">
       <div class="card push-down">
         <div class="card-5 left-5 tooltip-wrap">
           <div class="card-5-inner">
-            <div class="ten-back-card-5">
-              <%= image_tag @ten[4].attached_image, :id => "card-5-back", :class => "ten-card-back" %>
-            </div>
-            <div class="ten-card-image-5">
-              <%= image_tag ("card5.jpg"), :id => "card-5", :class => "ten-card-image" %>
-            </div>
+            <% if @ten.reversed == 2 && @reversed == true %>
+              <div class="ten-back-card-5">
+                <%= image_tag @ten[4].attached_image, :id => "card-5-back", :class => "ten-card-back card-image-reversed" %>
+              </div>
+              <div class="ten-card-image-5">
+                <%= image_tag ("card5.jpg"), :id => "card-5", :class => "ten-card-image" %>
+              </div>
+            <% else %>
+              <div class="ten-back-card-5">
+                <%= image_tag @ten[4].attached_image, :id => "card-5-back", :class => "ten-card-back" %>
+              </div>
+              <div class="ten-card-image-5">
+                <%= image_tag ("card5.jpg"), :id => "card-5", :class => "ten-card-image" %>
+              </div>
+            <% end %>
           </div>
           <div class="tooltip-content">
             <p><b><%=@ten[4].name %></b>. <%= @ten[4].description %></p>
