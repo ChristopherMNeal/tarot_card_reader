@@ -136,7 +136,8 @@ body {
 
 #reversed {
   position: fixed;
-  top: 80vh;
+  top: 83vh;
+  border-radius: 10px;
 }
 
 .card-image-reversed {
@@ -146,11 +147,14 @@ body {
 #show-printout {
   position: fixed;
   top: 88vh;
+  border-radius: 10px;
 }
 
 #hide-printout {
   position: fixed;
   top: 88vh;
+  background-color: #0b0b0bd9;
+  border-radius: 10px;
 }
 
 .p-subheading {
@@ -215,8 +219,12 @@ a:hover {
 }
 
 .nav-font {
-  font-size: 1.4em;
+  font-size: 4rem;
   text-align: center;
+  font-family: fancifulScript;
+  text-transform: lowercase;
+  text-shadow: 0px 0px 2px #fff;
+
 }
 
 @media only screen and (max-width: 770px) {
@@ -238,7 +246,8 @@ a:hover {
 
 .show-description {
   font-size: 1.75rem;
-  background: #70a9ca;
+  // background: #70a9ca;
+  background-color: #0b0b0bd1;
   padding: 3rem;
   font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
   margin-bottom: 5vh;
@@ -248,7 +257,8 @@ a:hover {
 
 .show-reverse-description {
   font-size: 1.75rem;
-  background: #70a9ca;
+  // background: #70a9ca;
+  background-color: #0b0b0bd1;
   padding: 3rem;
   font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
   margin-right: 4vw;
@@ -256,7 +266,7 @@ a:hover {
 }
 
 .show-description-title {
-  font-family: timeScript;
+  font-family: fancifulScript;
   text-shadow: rgb(1, 1, 1) 0 0 10px;
   text-align: center;
   margin-top: 4rem;
@@ -270,7 +280,7 @@ a:hover {
 .description-title {
   font-family: fancifulScript;
   text-align: center;
-  font-size: 2.9em;
+  font-size: 2.2em;
   margin-top: -5px;
   border-radius: 5px;
   box-shadow: 0px 0px 5px #fff;
@@ -280,12 +290,13 @@ a:hover {
   background: #70a9ca;
   height: 37vh;
   padding: 3vh;
+  overflow-y: hidden;
 }
 
 .inside-description {
   overflow: scroll;
   overflow-x: hidden;
-  height: 23vh;
+  height: 25vh;
   text-indent: 10%;
 }
 
@@ -908,6 +919,11 @@ button:focus {
 
 .tooltip-wrap:hover .tooltip-content {
   display: block;
+}
+
+#eye-img {
+  margin: -10vh auto;
+  height: 100vh;
 }
 
 #celtic-img{
