@@ -23,6 +23,9 @@
 
 ## Description
 
+See it here on Heroku:
+https://aqueous-inlet-95180.herokuapp.com/ 
+
 _This project was created for Epicodus bootcamp as a Team Week project to show proficiency in Ruby on Rails. A user can get learn about tarot cards, get either a three-card or ten-card tarot card reading._
 
 ## System Requirements
